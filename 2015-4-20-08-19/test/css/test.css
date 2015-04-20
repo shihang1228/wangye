@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{background:#000;}
+.suriprise .s_good a{width:298px;height:122px;display:block;z-index:999;}
+.surprise{width:1200px;height:550px;margin:0 auto;}
+.surprise .s_select{width:202px;height:50px;margin:84px auto;}
+.surprise .s_good{width:298px;height:122px;margin:58px 181px 129px 129px;float:left;}
+.surprise .s_bad{width:298px;height:122px;margin:58px 129px 129px 129px;float:left;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

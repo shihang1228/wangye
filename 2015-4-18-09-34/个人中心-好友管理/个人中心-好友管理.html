@@ -1,0 +1,450 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>个人中心-好友主页面</title>
+<link rel="stylesheet" type="text/css" href="css/public.css"/>
+<link rel="stylesheet" type="text/css" href="css/perInfor.css"/>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/tab.js"></script>
+<script type="text/javascript" src="js/hideshow.js"></script>
+<style type="text/css">
+	.clear{clear:both;}
+	.right-con .friendBox{border:1px solid blue;}
+	.friendList{width:984px;height:584px;border:1px solid red;margin:15px auto;}
+	.friendList .f_group{width:180px;height:584px;border:1px solid blue;float:left;}
+	.friendList .f_group .f_title{width:180px;height:35px;background:#ebebeb;color:#000;font-family:"微软雅黑";text-align:center;line-height:35px;}
+	.friendList .f_group .group_list{width:148px;height:518px;border:2px solid green;padding:15px;}
+	.friendList .f_group .group_list dl dt{font-size:18px;font-family:"微软雅黑";padding:8px;}
+	.friendList .f_group .group_list dl .group_add{margin-top:10px;margin-left: -14px;}
+	.friendList .f_group .group_list dl .group_add a{font-color:#000;}
+	.friendList .f_group .group_list dl .group_add a img{margin-right:4px;}
+	.friendList .f_group .group_list dl .group_yue{margin-top:30px;}
+	.friendList .f_group .group_list dl dt:hover,dd:hover{background:#d2d2d2;}
+	.friendList .f_group .group_list dl dt span{margin-left:17px;}
+	.friendList .f_group .group_list dl dd{padding-left: 19px;font-size: 14px;line-height: 24px;font-family: "微软雅黑";}
+	.friendList .f_group .group_list dl dd span{margin-left:17px;}
+
+
+
+	.friendList .f_con{width:478px;height:584px;margin-left:15px;border:1px solid blue;float:left;} 
+	.friendList .f_con .f_top{width:478px;height:35px;line-height:35px;border:1px solid red;}
+	.friendList .f_con .f_top .f_add{width:65px;height:30px;border-radius:4px;background:#fa8729;float:left;margin-left:25px;margin-top:4px;color:#fff;text-align:center;}
+	.friendList .f_con .f_top .f_add:hover{background:#0033ff;}
+
+	.friendList .f_con .f_top h3{float:left;line-height:35px;margin-right:80px;}
+	.friendList .f_con .f_top form .f_search{border:1px solid #ccc;width:110px;height:25px;margin-top:4px;border-radius:3px;outline:none;float:left;margin-right: 11px;}
+	.friendList .f_con .f_top form .f_sub{font-size:14px;float:left;line-height:35px;width:60px;height:30px;border-radius:4px;background:#0000ff;color:#fff;margin-top:4px;}
+
+	.friendList .f_con .fri_list{width:478px;height:548px;}
+	.friendList .f_con .fri_list .fri_table{width:478px;height:548px;border-collapse:collapse;}
+	.friendList .f_con .fri_list .fri_table .kuang{width:5px;height:5px;border:1px solid #000;display:inline-block;}
+	.friendList .f_con .fri_list .fri_table tr{height:28px;}
+	.friendList .f_con .fri_list .fri_table tr:hover{background:#d2d2d2;}
+	.friendList .f_con .fri_list .fri_table tr,th,td{text-align:center;}
+	.friendList .f_con .fri_list .fri_table tr .shanchu{margin-right:14px;}
+	.friendList .f_con .fri_list .fri_table tr .move img{margin-left:5px;}
+
+
+	.friendList .f_mab{width:290px;height:584px;margin-left:15px;border:1px solid blue;float:left;}
+	.friendList .f_mab .m_top{width:290px;height:35px;border:1px solid red;background:#ebebeb;}
+	.friendList .f_mab .m_top .f_title{float:left;line-height:37px;margin-left:13px;}
+	.friendList .f_mab .m_top a{margin-left:162px;line-height:35px;}
+	.friendList .f_mab .m_con{width:290px;height:547px;border:1px solid blue;}
+	.friendList .f_mab .m_con ul{margin-top: 30px;position:relative;}
+	.friendList .f_mab .m_con ul .m_icon{position:absolute;top: -9px;left: 14px;}
+	.friendList .f_mab .m_con ul li{width:55px;height:70px;float:left;list-style:none;margin:10px 8px;}
+	.friendList .f_mab .m_con ul .li_add{width:90px;height:30px;float:right;margin-rightL14px;}
+	.friendList .f_mab .m_con ul .li_add .add_friend{width:90px;height:30px;background:#fa8729;text-decoration:none;display:block;color:#fff;font-size:16px;text-align:center;line-height:30px;border-radius:4px;}
+	.friendList .f_mab .m_con ul .li_add .add_friend:hover{background:blue;}
+</style>
+</head>
+
+<body>
+<div class="wrap1200">
+	<div class="sideber">
+    	<div  class="sideberTx">
+            <h3><img src="images/tx-ico.jpg"//></h3>
+            <p>阳光生活</p>
+		</div>
+        <div class="sideberList">
+        	<h4><b>1</b><a>个人信息</a></h4>
+                <ul>
+                    <li><a href="">相片墙</a></li>
+                    <li><a href="">时间轴</a></li>
+                </ul>
+            <h4><b>2</b><a>个人动态</a></h4>
+            	<ul>
+                    <li><a href="">相片墙</a></li>
+                    <li><a href="">时间轴</a></li>
+                </ul>
+            <h4><b>3</b><a>电子相册</a></h4>
+                <ul>
+                    <li><a href="">相片墙</a></li>
+                    <li><a href="">时间轴</a></li>
+                </ul>
+            <h4><b>4</b><a>好友信箱</a></h4>
+            	<ul>
+                    <li><a href="">相片墙</a></li>
+                    <li><a href="">时间轴</a></li>
+                </ul>
+            <h4><b>5</b><a>装扮道具</a></h4>
+            	<ul>
+                    <li><a href="">相片墙</a></li>
+                    <li><a href="">时间轴</a></li>
+                </ul>
+        </div>
+        <div class="logo"><a href=""><img src="images/logo.png" width="100" height="26"/></a></div>
+    </div>
+    <div class="right-con">
+    	<div class="friendBox">
+        	<div class="friAd"><img src="images/pic982.png"/></div>
+            
+        </div>
+
+		<div class="clear"></div>
+		<div class="friendList">
+			<div class="f_group">
+				<h3 class="f_title">好友分组</h3>
+				<div class="group_list">
+					<dl>
+						<dt>全部<span>88</span></dt>
+						<dd>组1<span>20</span></dd>
+						<dd>组2<span>40</span></dd>
+						<dd>组3<span>28</span></dd>
+
+						<dt class="group_add">
+							<a href="#"><img src="image/jia.png" alt="" />添加分组</a>
+						</dt>
+						
+						
+						<dt class="group_yue">约吗<span>25</span></dt>
+						<dt>已删<span>8</span></dt>
+					</dl>
+
+				</div>
+			</div>
+			<div class="f_con">
+				<div class="f_top">
+					<h3 class="f_title">全部好友（88）</h3>
+					<form action="#">
+						<input type="text" class="f_search" name="f_search" />		
+						<input type="submit" value="搜索" class="f_sub" />
+					</form>
+					<a href="#" class="f_add">添加好友</a>
+				</div>
+				<div class="clear"></div>
+				<div class="fri_list">
+					<table class="fri_table">
+						<tr>
+							<th><i class="kuang"></i></th>
+							<th>头像</th>
+							<th>名字</th>
+							<th>备注</th>
+							<th>分组</th>
+							<th>最后登录</th>
+							<th colspan="3">操作</th>
+						</tr>
+						<tr>
+							<td><i class="kuang"></i></td>
+							<td><img src="image/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td>备注备注</td>
+							<td>分组分组</td>
+							<td>7天内</td>
+							<td><img src="image/eye.png" alt="" /></td>
+							<td><img src="image/edit.png" alt="" /></td>
+							<td><img src="image/delete.png" alt="" /></td>
+						</tr>
+						<tr>
+							<td><i class="kuang"></i></td>
+							<td><img src="image/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td>备注备注</td>
+							<td>分组分组</td>
+							<td>7天内</td>
+							<td><img src="image/eye.png" alt="" /></td>
+							<td><img src="image/edit.png" alt="" /></td>
+							<td><img src="image/delete.png" alt="" /></td>
+						</tr>
+						<tr>
+							<td><i class="kuang"></i></td>
+							<td><img src="image/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td>备注备注</td>
+							<td>分组分组</td>
+							<td>7天内</td>
+							<td><img src="image/eye.png" alt="" /></td>
+							<td><img src="image/edit.png" alt="" /></td>
+							<td><img src="image/delete.png" alt="" /></td>
+						</tr>
+						<tr>
+							<td><i class="kuang"></i></td>
+							<td><img src="image/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td>备注备注</td>
+							<td>分组分组</td>
+							<td>7天内</td>
+							<td><img src="image/eye.png" alt="" /></td>
+							<td><img src="image/edit.png" alt="" /></td>
+							<td><img src="image/delete.png" alt="" /></td>
+						</tr>
+						<tr>
+							<td><i class="kuang"></i></td>
+							<td><img src="image/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td>备注备注</td>
+							<td>分组分组</td>
+							<td>7天内</td>
+							<td><img src="image/eye.png" alt="" /></td>
+							<td><img src="image/edit.png" alt="" /></td>
+							<td><img src="image/delete.png" alt="" /></td>
+						</tr>
+						<tr>
+							<td><i class="kuang"></i></td>
+							<td><img src="image/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td>备注备注</td>
+							<td>分组分组</td>
+							<td>7天内</td>
+							<td><img src="image/eye.png" alt="" /></td>
+							<td><img src="image/edit.png" alt="" /></td>
+							<td><img src="image/delete.png" alt="" /></td>
+						</tr>
+						<tr>
+							<td><i class="kuang"></i></td>
+							<td><img src="image/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td>备注备注</td>
+							<td>分组分组</td>
+							<td>7天内</td>
+							<td><img src="image/eye.png" alt="" /></td>
+							<td><img src="image/edit.png" alt="" /></td>
+							<td><img src="image/delete.png" alt="" /></td>
+						</tr>
+						<tr>
+							<td><i class="kuang"></i></td>
+							<td><img src="image/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td>备注备注</td>
+							<td>分组分组</td>
+							<td>7天内</td>
+							<td><img src="image/eye.png" alt="" /></td>
+							<td><img src="image/edit.png" alt="" /></td>
+							<td><img src="image/delete.png" alt="" /></td>
+						</tr>
+						<tr>
+							<td><i class="kuang"></i></td>
+							<td><img src="image/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td>备注备注</td>
+							<td>分组分组</td>
+							<td>7天内</td>
+							<td><img src="image/eye.png" alt="" /></td>
+							<td><img src="image/edit.png" alt="" /></td>
+							<td><img src="image/delete.png" alt="" /></td>
+						</tr>
+						<tr>
+							<td><i class="kuang"></i></td>
+							<td><img src="image/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td>备注备注</td>
+							<td>分组分组</td>
+							<td>7天内</td>
+							<td><img src="image/eye.png" alt="" /></td>
+							<td><img src="image/edit.png" alt="" /></td>
+							<td><img src="image/delete.png" alt="" /></td>
+						</tr>
+						<tr>
+							<td><i class="kuang"></i></td>
+							<td><img src="image/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td>备注备注</td>
+							<td>分组分组</td>
+							<td>7天内</td>
+							<td><img src="image/eye.png" alt="" /></td>
+							<td><img src="image/edit.png" alt="" /></td>
+							<td><img src="image/delete.png" alt="" /></td>
+						</tr>
+						<tr>
+							<td><i class="kuang"></i></td>
+							<td><img src="image/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td>备注备注</td>
+							<td>分组分组</td>
+							<td>7天内</td>
+							<td><img src="image/eye.png" alt="" /></td>
+							<td><img src="image/edit.png" alt="" /></td>
+							<td><img src="image/delete.png" alt="" /></td>
+						</tr>
+						<tr>
+							<td><i class="kuang"></i></td>
+							<td><img src="image/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td>备注备注</td>
+							<td>分组分组</td>
+							<td>7天内</td>
+							<td><img src="image/eye.png" alt="" /></td>
+							<td><img src="image/edit.png" alt="" /></td>
+							<td><img src="image/delete.png" alt="" /></td>
+						</tr>
+						<tr>
+							<td><i class="kuang"></i></td>
+							<td><img src="image/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td>备注备注</td>
+							<td>分组分组</td>
+							<td>7天内</td>
+							<td><img src="image/eye.png" alt="" /></td>
+							<td><img src="image/edit.png" alt="" /></td>
+							<td><img src="image/delete.png" alt="" /></td>
+						</tr>
+						<tr>
+							<td><i class="kuang"></i></td>
+							<td><img src="image/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td>备注备注</td>
+							<td>分组分组</td>
+							<td>7天内</td>
+							<td><img src="image/eye.png" alt="" /></td>
+							<td><img src="image/edit.png" alt="" /></td>
+							<td><img src="image/delete.png" alt="" /></td>
+						</tr>
+						<tr>
+							<td colspan="3">
+								<a href="" class="shanchu">删除</a>
+								<a href="#" class="move">移动分组<img src="image/xiajiantou.png" alt="" /></a>
+							</td>
+							<td colspan="2"></td>
+							<td colspan="4">
+								<a href="#">&lt;</a>
+								<a href="#">1</a>
+								<a href="#">2</a>
+								<a href="#">3</a>
+								<a href="#">...</a>
+								<a href="#">20</a>
+								<a href="#">&gt;</a>
+							</td>
+						</tr>
+					</table>	
+				</div>
+
+
+			</div>
+			<div class="f_mab">
+				<div class="m_top">
+					<h3 class="f_title">可能认识</h3>
+					<a href="#">换一批</a>
+				</div>
+				<div class="m_con">
+					<ul>
+						<i class="m_icon"><img src="image/friend.png" alt="" /></i>
+						<li>
+							<img src="#" alt="" width="55" height="55" />
+							<p class="m_tip">小妮子...</p>
+						</li>
+						<li>
+							<img src="#" alt="" width="55" height="55" />
+							<p class="m_tip">小妮子...</p>
+						</li>
+						<li>
+							<img src="#" alt="" width="55" height="55" />
+							<p class="m_tip">小妮子...</p>
+						</li>
+						<li>
+							<img src="#" alt="" width="55" height="55" />
+							<p class="m_tip">小妮子...</p>
+						</li>
+
+						<li>
+							<img src="#" alt="" width="55" height="55" />
+							<p class="m_tip">小妮子...</p>
+						</li>
+						<li>
+							<img src="#" alt="" width="55" height="55" />
+							<p class="m_tip">小妮子...</p>
+						</li>
+						<li>
+							<img src="#" alt="" width="55" height="55" />
+							<p class="m_tip">小妮子...</p>
+						</li>
+						<li>
+							<img src="#" alt="" width="55" height="55" />
+							<p class="m_tip">小妮子...</p>
+						</li>
+
+						<li>
+							<img src="#" alt="" width="55" height="55" />
+							<p class="m_tip">小妮子...</p>
+						</li>
+						<li>
+							<img src="#" alt="" width="55" height="55" />
+							<p class="m_tip">小妮子...</p>
+						</li>
+						<li>
+							<img src="#" alt="" width="55" height="55" />
+							<p class="m_tip">小妮子...</p>
+						</li>
+						<li>
+							<img src="#" alt="" width="55" height="55" />
+							<p class="m_tip">小妮子...</p>
+						</li>
+
+						<li>
+							<img src="#" alt="" width="55" height="55" />
+							<p class="m_tip">小妮子...</p>
+						</li>
+						<li>
+							<img src="#" alt="" width="55" height="55" />
+							<p class="m_tip">小妮子...</p>
+						</li>
+						<li>
+							<img src="#" alt="" width="55" height="55" />
+							<p class="m_tip">小妮子...</p>
+						</li>
+						<li>
+							<img src="#" alt="" width="55" height="55" />
+							<p class="m_tip">小妮子...</p>
+						</li>
+
+						<li>
+							<img src="#" alt="" width="55" height="55" />
+							<p class="m_tip">小妮子...</p>
+						</li>
+						<li>
+							<img src="#" alt="" width="55" height="55" />
+							<p class="m_tip">小妮子...</p>
+						</li>
+						<li>
+							<img src="#" alt="" width="55" height="55" />
+							<p class="m_tip">小妮子...</p>
+						</li>
+						<li>
+							<img src="#" alt="" width="55" height="55" />
+							<p class="m_tip">小妮子...</p>
+						</li>
+						<div class="clear"></div>
+						<li class="li_add">
+							<a href="#" class="add_friend">一键添加</a>
+						</li>
+					</ul>
+					
+				</div>
+			</div>
+		</div>
+
+
+    </div>
+    
+</div>
+ 
+
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".wrap1200 .right-con .friendList").find("table tr:even").css({"background":"#edeeee"});
+		})
+		
+	</script>
+</body>
+</html>

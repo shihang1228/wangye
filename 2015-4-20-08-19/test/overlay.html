@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title></title>
+		<meta name="Keywords" content="">
+		<meta name="description" content="">
+		
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/overlay.css"/>
+
+	</head>
+<body>
+	
+	<a href="#" target="_self" class="btn">网站</a>
+
+	<!--dm start-->
+	<div class="dm">
+		<!--screen start-->
+		<div class="screen">
+			<a href="#" class="s_close"><img src="images/close.png" width="50" height="50" alt="关闭" /></a>
+			<div class="mask"></div>
+			<div class="s_show">
+				<img src="images/mei.jpg" alt="" />
+			</div>
+		</div>
+		<!--end screen-->
+
+	</div>
+	<!--end dm-->
+	
+
+<!--引入jquery的官方类库-->
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		
+		// 调用初始化弹幕函数
+		init_screen();
+
+		// 点击展开和关闭
+		$(".btn,.s_close").click(function(){
+			$(".dm,.s_close").toggle("slow");
+		});
+
+		// 发送信息
+		$("#send_sub").click(function(){
+			var text = $(".s_txt").val();
+			var _label = $("<div class='magictime twisterInUp'>"+text+"</div>");
+			$(".s_show").append(_label);
+			init_screen();
+		});
+		
+		function init_screen(){
+			var _top = 0;
+			$(".s_show").find("div").show().each(function(){
+				var _left = $(window).width() - $(this).width(); // 浏览器的最大宽度，div的left值
+				var _height = $(window).height(); // 浏览器的最大高度
+				
+				_top = _top + 76;
+				if(_top >= _height - 100){
+					_top = 0;
+				}
+				
+				// 设定文字的初始化位置
+				$(this).css({left:_left,top:_top,color:getRandomColor()});
+				
+				// 根据取余 设定不一样的时间
+				var time = 10000;
+				if($(this).index() % 2 == 0){
+					time = 20000;
+				}
+				// 动起来
+				$(this).animate({left:"-"+_left+"px"},time,function(){
+					$(this).remove();
+				});
+
+			});
+		}
+
+	});
+
+</script>
+
+</body>
+</html>

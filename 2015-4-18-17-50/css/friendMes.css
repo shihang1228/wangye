@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wrap1200{ width:1200px; margin:0 auto;display:table; padding-bottom:20px; background:#fff;}
+.sideber{ float:left; width:150px; height:950px; position:relative; position:fixed; background:url(../images/body.png) repeat-y}
+.sideberTx h3{ width:90px; height:90px; border:5px solid #fff; border-radius:150px 150px 150px 150px; overflow:hidden; margin:10% auto;}
+.sideberTx h3 img{ width:90px; height:90px;}
+.sideberTx p{ text-align:center; font-size:18px; color:#000000; width:100%; }
+.sideberList{ padding-top:4%;}
+.sideberList h4{ height:32px; line-height:32px; margin-top:10px;}
+.sideberList h4 b{ display:block; width:18px; height:18px; background:#000; float:left; margin:8px 5px 0 22px; color:#fff; text-align:center; line-height:18px; font-weight:100; border-radius:5px 5px 5px 5px;}
+.sideberList h4 a{ color:#000; font-size:14px; font-weight:100;}
+.sideberList ul li a:hover,.sideberList h4 a:hover{ color:#dc481c; cursor:pointer;}
+.sideberList ul{ padding-left:50px;}
+.sideberList ul li a{ color:#636363;}
+.gr-one{ margin-top:5%;}
+.logo{ position:absolute; bottom:2%; left:22px;}
+
+.right-con{ float:right; width:1050px; background:#fff;}
+.gr-oneLeft{ float:left; width:650px; padding-left:60px;}
+
+.friendBox{ padding:121px 0 0 33px;}
+.friAd{ width:982px; height:122px;}
+
+.remark,.groups{border:1px solid #ccc;background:#fff;}
+
+
+
+/*右侧下方好友列表*/
+.friendList{width:984px;height:584px;margin:15px auto;}
+
+/*好友分组*/
+.friendList .f_group{width:180px;height:584px;float:left;border:1px solid #a0a0a0;}
+.friendList .f_group .f_title{width:180px;height:35px;background:#ebebeb;color:#000;font-family:"微软雅黑";text-align:center;line-height:35px;}
+
+.friendList .f_group .group_list{width:148px;height:518px;padding:15px;}
+.friendList .f_group .group_list dl dt{font-size:18px;font-family:"微软雅黑";padding:8px;}
+.friendList .f_group .group_list dl .group_add{margin-top:10px;margin-left: -14px;}
+.friendList .f_group .group_list dl .group_add a{font-color:#000;}
+.friendList .f_group .group_list dl .group_add a img{margin-right:4px;}
+.friendList .f_group .group_list dl .group_yue{margin-top:30px;}
+.friendList .f_group .group_list dl dt:hover,dd:hover{background:#d2d2d2;}
+.friendList .f_group .group_list dl dt span{margin-left:17px;}
+.friendList .f_group .group_list dl dd{padding-left: 19px;font-size: 14px;line-height: 24px;font-family: "微软雅黑";}
+.friendList .f_group .group_list dl dd span{margin-left:17px;}
+
+
+/*全部好友*/
+.friendList .f_con{width:478px;height:584px;margin-left:15px;border:1px solid #a0a0a0;float:left;} 
+.friendList .f_con .f_top{width:478px;height:35px;line-height:35px;}
+.friendList .f_con .f_top .f_add{width:65px;height:30px;border-radius:4px;background:#fa8729;float:left;margin-left:25px;margin-top:4px;color:#fff;text-align:center;}
+.friendList .f_con .f_top .f_add:hover{background:#0033ff;}
+
+.friendList .f_con .f_top h3{float:left;line-height:35px;margin-right:80px;}
+.friendList .f_con .f_top form .f_search{border:1px solid #ccc;width:110px;height:25px;margin-top:4px;border-radius:3px;outline:none;float:left;margin-right: 11px;}
+.friendList .f_con .f_top form .f_sub{font-size:14px;float:left;line-height:35px;width:60px;height:30px;border-radius:4px;background:#0000ff;color:#fff;margin-top:4px;}
+
+.friendList .f_con .fri_list{width:478px;height:548px;}
+.friendList .f_con .fri_list .fri_table{width:478px;height:548px;border-collapse:collapse;}
+.friendList .f_con .fri_list .fri_table .kuang{width:5px;height:5px;border:1px solid #000;display:inline-block;}
+.friendList .f_con .fri_list .fri_table tr{height:28px;}
+.friendList .f_con .fri_list .fri_table tr:hover{background:#d2d2d2;}
+
+.friendList .f_con .fri_list .fri_table tr input[type='text']{text-align: center;width: 56px;height: 26px;line-height:26px;}
+.friendList .f_con .fri_list .fri_table tr,th,td{text-align:center;}
+.friendList .f_con .fri_list .fri_table tr .shanchu{margin-right:14px;}
+.friendList .f_con .fri_list .fri_table tr .move img{margin-left:5px;}
+
+/*可能认识*/
+.friendList .f_mab{width:290px;height:584px;margin-left:15px;float:left;border:1px solid #a0a0a0;}
+.friendList .f_mab .m_top{width:290px;height:35px;background:#ebebeb;}
+.friendList .f_mab .m_top .f_title{float:left;line-height:37px;margin-left:13px;}
+.friendList .f_mab .m_top a{margin-left:162px;line-height:35px;}
+.friendList .f_mab .m_con{width:290px;height:547px;}
+.friendList .f_mab .m_con ul{margin-top: 30px;position:relative;}
+.friendList .f_mab .m_con ul .m_icon{position:absolute;top: -9px;left: 14px;}
+.friendList .f_mab .m_con ul li{width:55px;height:70px;float:left;list-style:none;margin:10px 8px;}
+.friendList .f_mab .m_con ul .li_add{width:90px;height:30px;float:right;margin-rightL14px;}
+.friendList .f_mab .m_con ul .li_add .add_friend{width:90px;height:30px;background:#fa8729;text-decoration:none;display:block;color:#fff;font-size:16px;text-align:center;line-height:30px;border-radius:4px;}
+.friendList .f_mab .m_con ul .li_add .add_friend:hover{background:blue;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
