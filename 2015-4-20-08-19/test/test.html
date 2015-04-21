@@ -5,14 +5,15 @@
 		<title>message</title>
 		<meta name="Keywords" content="关键词，关键词">
 		<meta name="description" content="">
-		
-		<link rel="stylesheet" type="text/css" href="css/public.css"/>
-		<link rel="stylesheet" type="text/css" href="css/test.css"/>
+
 		<style>
+			*{margin:0;padding:0;}
+			img{border:none;}
+			body{font-size:14px;font-family:"微软雅黑";background:#000;}
 			.suriprise .s_good a{width:298px;height:122px;display:block;z-index:999;}
 			.surprise{width:1200px;height:550px;margin:0 auto;}
 			.surprise .s_select{width:202px;height:50px;margin:84px auto;}
-			.surprise .s_good{width:298px;height:122px;margin:58px 181px 129px 129px;float:left;}
+			.surprise .s_good{width:298px;height:122px;margin:58px 181px 129px 129px;float:left;border:1px solid red;}
 			.surprise .s_bad{width:298px;height:122px;margin:58px 129px 129px 129px;float:left;}
 		</style>
 	 </head>
@@ -39,22 +40,22 @@
 			/*父亲 寻找 所有的儿子 多个p*/
 			var index = 0;
 			$(".surprise").find(".p").hover(function(){
-					
+					/*找到多个P 以后缓存 暴打*/
 					$this = $(this);
-
+					/*用一个灵活的处理方式 我们都是根据连接去跳转的 定义action*/
 					var $action = $this.find("a").attr("href");
-
+					/*缓存当前儿子 A( 或者B) 自己的财产*/
 					var $temp =$this.html() ;	
 					if(!$action){			
-					   
-						var $sib = $this.siblings(".p");				
-
+					   /*根据当前儿子自己财产action （是否有车子）*/
+						var $sib = $this.siblings(".p");						 
+						/*r如果有车子 ，就命令儿子A 和 B 进行交换 */
 						$this.html($sib.html()); 
 						var $src =$this.find("a > img").attr("src");
 						var $tempSrc = $this.find("a img").data("src");						
 						$this.find("a > img").attr("src",$tempSrc);			
 						$this.find("a > img").attr("data-src",$src);						
-				
+						/*最后搞定*/
 						$sib.html($temp);	
 						$src = $sib.find("a > img").attr("src");
 						$tempSrc = $sib.find("a > img").data("src")
@@ -62,7 +63,23 @@
 						$sib.find("a > img").attr("data-src",$src);
 					}
 			});
+			 
+			/*
+				
+			var goodImages = $(".surprise").find(".s_good img").attr("src");
+			var badImages = $(".surprise").find(".s_bad img").attr("src");
+			$(".surprise").find(".s_good").hover(function(){
+				if(goodImages == "images/goodMes.png") {
+					$(this).children().remove();
+					$(this).append("<a href='bad.html'><img src='images/fanBad.png' width='298' height='122'/></a>");
+					
+					$(".surprise").find(".s_bad").children().remove();
+					$(".surprise").find(".s_bad").append("<img src='images/fanGod.png' width='298' height='122'/>");
+				};
+			});
+			*/
 
+			
 		})
 	</script>
  </body>
