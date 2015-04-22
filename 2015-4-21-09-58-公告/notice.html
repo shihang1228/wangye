@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+		<title>网站公告区</title>
+		<meta name="Keywords" content="关键词，关键词">
+		<meta name="description" content="">
+
+		<style>
+			*{margin:0;padding:0;}
+			a{text-decoration:none;color:#999;}
+			img{border:none;}
+			.current{background: #008cba;color: white;font-weight: bold;cursor: default;}
+		    .no_line{width:790px;height:2px;background:#f63;display:block;margin:20px 0;}
+			body{font-size:14px;font-family:"微软雅黑";background:#fff;}
+			textarea{wrap:"virtual";height:66px;width:600px;border:1px solid #ccc;border-radius:5px;margin-top:20px;outline:none;padding:5px;resize:none;} 
+			textarea:hover{border-color: rgba(82,168,236,.8);box-shadow: 0 0 8px rgba(82,168,236,.6);}
+			.header{width:100%;height:53px;background:#000;}
+			.notice{width:1200px;height:2000px;margin:0 auto;}
+			.notice .notice_left{border-radius:3px;width: 795px;margin:30px;padding:10px;padding-bottom: 30px;min-height: 350px;float: left;border:1px solid #ccc;box-shadow: 0 1px 2px #aaa;}
+			.notice .notice_left .no-head{color: #f63;;clear: both;font-size: 22px;padding: 10px;width: 100%;height:45px;}
+			.notice .notice_left .no-head h3{float:left;}
+			.notice .notice_left .no-head .no_listlink{float:right;margin-right:17px;}
+			.notice .notice_left .no-head .no_listlink a{text-decoration:none;color:#000;}
+			
+			.notice .notice_left .no-content{width:100%;height:500px;}
+			.notice .notice_left .no-content .no_item{margin:10px 0;}
+			
+			
+			.notice .notice_left .no_content .no_discuss{position:relative;}
+			.notice .notice_left .no_content .no_discuss .q_box{width:610px;height:30px;margin: 10px 0;}
+			.notice .notice_left .no_content .no_discuss .q_box a{padding:0 10px;float:left;}
+			.notice .notice_left .no_content .no_discuss .q_box .publish{width:56px;height:30px;background:#f63;color:#fff;display:block;float:right;text-align:center;line-height:30px;border-radius:4px;}
+			.notice .notice_left .no_content .no_discuss .q_box .publish:hover{background:#ff5922;}
+
+			.notice .notice_left .no_content .no_discuss .q_face{width:392px;height:173px;border-radius:4px;border:1px solid #d0d0d0;background:#fff;position:absolute;top:151px;left:8px;box-shadow: 1px 1px 9px 1px #d1d1d1;display:none;}
+			.notice .notice_left .no_content .no_discuss .q_face ul li{list-style:none;float:left;margin:1px;cursor:pointer;}
+			
+			.notice .notice_left .no_content .q_page{margin-top:10px;width:790px;height:93px;}
+			.notice .notice_left .no_content .q_page ul li{list-style:none;float:left;margin: 10px 3px;width:28px;height:18px;text-align:center;}
+
+			.notice .notice_left .no_content .q_page ul li a{display: block;padding: 0.0625rem 0.625rem 0.0625rem;color: #999999;-webkit-border-radius: 3px;border-radius: 3px;width:28px;height:18px;display:block;float:left;}
+
+			
+			
+			.notice .notice_left .no_content .dis_list ul li{list-style:none;margin:10px 0;border-bottom: 1px dotted #D8D8D8;padding:10px 0;height:140px;}
+			.notice .notice_left .no_content .dis_list ul li .user_pic{float:left;padding: 4px 15px 4px 10px;}
+			.notice .notice_left .no_content .dis_list ul li .msgBox{float:left;width: 685px;height: 101px;}
+			.notice .notice_left .no_content .dis_list ul li .msgBox .username{width:669px;height: 23px;font-size: 15px;line-height: 23px;color: #000;margin:5px 0;}
+			.notice .notice_left .no_content .dis_list ul li .msgBox .username a{color:#000;float:right;}
+			.notice .notice_left .no_content .dis_list ul li .msgBox .msg{font-size: 14px;overflow: hidden;word-wrap: break-word;line-height: 24px;}
+
+			.notice .notice_left .no_content .dis_list ul li .msgBox .main_access{float:right;margin: 20px 0;margin-right: 13px;}
+			.notice .notice_left .no_content .dis_list ul li .msgBox .main_access a{float:left;margin:0 10px;}
+			.notice .notice_left .no_content .dis_list ul li .msgBox .main_access .jubao{width: 14px;background: url("images/jubao.png");background-position: 14px 1px;height: 14px;display: block;float: left;margin: 0 5px;}
+
+			.notice .notice_left .no_content .dis_list ul li .msgBox .main_access .dianzan{width: 14px;background: url("images/jubao.png");background-position: 14px 1px;height: 14px;display: block;float: left;margin: 0 5px;}
+
+			.notice .notice_right{width:305px;height:542px;margin-top:30px;float:left;}
+			.notice .notice_right .no_search{width:300px;height:50px;}
+			.notice .notice_right .no_search .search_input{width: 200px;height: 30px;margin: 6px;float:left;line-height:30px;}
+			.notice .notice_right .no_search .search_a{margin: 7px 0;float: left;display: block;text-decoration: none;width: 68px;height: 31px;border: 1px solid #dedede;border-radius:4px;text-align:center;line-height:31px;color:#000;}
+			.notice .notice_right .no_img{width:300px;height:147px;margin:10px 0;}
+
+		</style>
+	 </head>
+	 <body>
+		<div class="header">
+			
+		</div>
+		<div class="notice">
+			<div class="notice_left">
+				<div class='no-head'>
+					<h3>网站公告区</h3>
+					<div class='no_listlink'>
+						<a href="notice_list.html">公告列表</a>
+					</div>
+				</div>
+				<div class="no_content">
+					<div class="no_item">
+						<img src="images/notice_2.jpg" width="460" height="676" alt="" />
+						<i class="no_line"></i>
+					</div>
+					<div class="no_discuss">
+						<h4>发表评论</h4>
+						<textarea class="discuss"></textarea>
+						<p class="q_box">
+							<a href="#" class="q_express"><img src="images/notice_express.png" width="16" height="16" alt="QQ表情"/>表情</a>
+							<a href="#"><img src="images/notice_pic.png" width="16" height="16" alt="图片"/>图片</a>
+							<a href="#" class="publish">发表</a>
+						</p>
+						<div class="q_face">
+							<ul>
+								<li><img src="images/qq_expression/1.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/2.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/3.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/4.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/5.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/6.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/7.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/8.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/9.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/10.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/11.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/12.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/13.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/14.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/15.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/16.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/17.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/18.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/19.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/20.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/21.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/22.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/23.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/24.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/25.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/26.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/27.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/28.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/29.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/30.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/31.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/32.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/33.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/34.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/35.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/36.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/37.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/38.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/39.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/40.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/41.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/42.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/43.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/44.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/45.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/46.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/47.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/48.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/49.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/50.gif" alt="笑" /></li>
+
+								<li><img src="images/qq_expression/51.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/52.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/53.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/54.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/55.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/56.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/57.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/58.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/59.gif" alt="笑" /></li>
+
+								<li><img src="images/qq_expression/61.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/62.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/63.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/64.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/65.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/66.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/67.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/68.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/69.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/60.gif" alt="笑" /></li>
+
+								<li><img src="images/qq_expression/71.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/72.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/73.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/74.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/75.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/76.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/77.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/78.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/79.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/80.gif" alt="笑" /></li>
+
+								<li><img src="images/qq_expression/81.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/82.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/83.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/84.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/85.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/86.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/87.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/88.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/89.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/90.gif" alt="笑" /></li>
+								<li><img src="images/qq_expression/91.gif" alt="笑" /></li>
+								
+							</ul>
+						</div>
+					</div>
+
+					<div class="q_page">
+						<i class="no_line"></i>
+						<ul>
+							<li>
+								<a href="#"><</a>
+							</li>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">...</a></li>
+							<li><a href="#">44</a></li>
+							<li><a href="#">45</a></li>
+							<li><a href="#">></a></li>
+							<li></li>
+						</ul>
+					</div>
+					<div class="dis_list">
+						<ul>
+							<li>
+								<a href="#" class="user_pic"><img src="images/user_pic1.jpg" alt="" /></a>
+								<div class="msgBox">
+									<h3 class="username">喵喵喵喵喵喵
+									
+										<a href="#" class="launch"><img src="images/launch.png" alt="展开" width="14" height="14"/>展开</a>
+									
+									</h3>
+									<p class="msg">发现一个网站建设图片素材和代码都非常实用的网站，最近工作效率提高不少。分享下17素材网发现一个网站建设图片素材和代码都非常实用的网站，最近工作效率提高不少。分享下17素材网发现一个网站建设图片素材和代码都非常实用的网站，</p>
+									<div class="main_access">
+										<a href="#">2015-4-21 18:15:50</a>
+										<a href="#"><i class="jubao"></i>举报</a>
+										<a href="#"><i class="dianzan"></i>点赞</a>
+										<a href="#">回复</a>
+									</div>
+								</div>
+							</li>
+
+
+							<li>
+								<a href="#" class="user_pic"><img src="images/user_pic1.jpg" alt="" /></a>
+								<div class="msgBox">
+									<h3 class="username">喵喵喵喵喵喵
+									
+										<a href="#" class="launch"><img src="images/launch.png" alt="展开" width="14" height="14"/>展开</a>
+									
+									</h3>
+									<p class="msg">发现一个网站建设图片素材和代码都非常实用的网站，最近工作效率提高不少。分享下17素材网发现一个网站建设图片素材和代码都非常实用的网站，最近工作效率提高不少。分享下17素材网发现一个网站建设图片素材和代码都非常实用的网站，</p>
+									<div class="main_access">
+										<a href="#">2015-4-21 18:15:50</a>
+										<a href="#"><i class="jubao"></i>举报</a>
+										<a href="#"><i class="dianzan"></i>点赞</a>
+										<a href="#">回复</a>
+									</div>
+								</div>
+							</li>
+
+
+							<li>
+								<a href="#" class="user_pic"><img src="images/user_pic1.jpg" alt="" /></a>
+								<div class="msgBox">
+									<h3 class="username">喵喵喵喵喵喵
+									
+										<a href="#" class="launch"><img src="images/launch.png" alt="展开" width="14" height="14"/>展开</a>
+									
+									</h3>
+									<p class="msg">发现一个网站建设图片素材和代码都非常实用的网站，最近工作效率提高不少。分享下17素材网发现一个网站建设图片素材和代码都非常实用的网站，最近工作效率提高不少。分享下17素材网发现一个网站建设图片素材和代码都非常实用的网站，</p>
+									<div class="main_access">
+										<a href="#">2015-4-21 18:15:50</a>
+										<a href="#"><i class="jubao"></i>举报</a>
+										<a href="#"><i class="dianzan"></i>点赞</a>
+										<a href="#">回复</a>
+									</div>
+								</div>
+							</li>
+
+
+							<li>
+								<a href="#" class="user_pic"><img src="images/user_pic1.jpg" alt="" /></a>
+								<div class="msgBox">
+									<h3 class="username">喵喵喵喵喵喵
+									
+										<a href="#" class="launch"><img src="images/launch.png" alt="展开" width="14" height="14"/>展开</a>
+									
+									</h3>
+									<p class="msg">发现一个网站建设图片素材和代码都非常实用的网站，最近工作效率提高不少。分享下17素材网发现一个网站建设图片素材和代码都非常实用的网站，最近工作效率提高不少。分享下17素材网发现一个网站建设图片素材和代码都非常实用的网站，</p>
+									<div class="main_access">
+										<a href="#">2015-4-21 18:15:50</a>
+										<a href="#"><i class="jubao"></i>举报</a>
+										<a href="#"><i class="dianzan"></i>点赞</a>
+										<a href="#">回复</a>
+									</div>
+								</div>
+							</li>
+
+
+							<li>
+								<a href="#" class="user_pic"><img src="images/user_pic1.jpg" alt="" /></a>
+								<div class="msgBox">
+									<h3 class="username">喵喵喵喵喵喵
+									
+										<a href="#" class="launch"><img src="images/launch.png" alt="展开" width="14" height="14"/>展开</a>
+									
+									</h3>
+									<p class="msg">发现一个网站建设图片素材和代码都非常实用的网站，最近工作效率提高不少。分享下17素材网发现一个网站建设图片素材和代码都非常实用的网站，最近工作效率提高不少。分享下17素材网发现一个网站建设图片素材和代码都非常实用的网站，</p>
+									<div class="main_access">
+										<a href="#">2015-4-21 18:15:50</a>
+										<a href="#"><i class="jubao"></i>举报</a>
+										<a href="#"><i class="dianzan"></i>点赞</a>
+										<a href="#">回复</a>
+									</div>
+								</div>
+							</li>
+
+
+							<li>
+								<a href="#" class="user_pic"><img src="images/user_pic1.jpg" alt="" /></a>
+								<div class="msgBox">
+									<h3 class="username">喵喵喵喵喵喵
+									
+										<a href="#" class="launch"><img src="images/launch.png" alt="展开" width="14" height="14"/>展开</a>
+									
+									</h3>
+									<p class="msg">发现一个网站建设图片素材和代码都非常实用的网站，最近工作效率提高不少。分享下17素材网发现一个网站建设图片素材和代码都非常实用的网站，最近工作效率提高不少。分享下17素材网发现一个网站建设图片素材和代码都非常实用的网站，</p>
+									<div class="main_access">
+										<a href="#">2015-4-21 18:15:50</a>
+										<a href="#"><i class="jubao"></i>举报</a>
+										<a href="#"><i class="dianzan"></i>点赞</a>
+										<a href="#">回复</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+
+
+			</div>
+
+
+			<div class="notice_right">
+				<div class="no_search">
+					<input type="text" class="search_input"/>
+					<a href="#" class="search_a">百度搜索</a>
+				</div>
+				<div class="no_img">
+					<img src="images/pic_1.jpg" width="300" height="147" alt="" />
+				</div>
+				<div class="no_img">
+					<img src="images/pic_4.jpg" width="300" height="147" alt="" />
+				</div>
+				<div class="no_img">
+					<img src="images/pic_2.jpg" width="300" height="147" alt="" />
+				</div>
+			</div>
+		</div>
+
+
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".q_express").click(function(){
+					$(".q_face").toggle(600);
+				});
+
+				$("ul").find("li").click(function(){
+					var img = $(this).find("img").clone();
+					$("textarea").append(img);
+				});
+
+					
+			});
+		
+		
+		</script>
+	 </body>
+</html>
