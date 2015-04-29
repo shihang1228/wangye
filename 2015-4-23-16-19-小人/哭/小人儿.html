@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>logo</title>
+
+<style>
+ 
+.s{
+display:none; }
+.f1:hover .ul
+{
+border:#000000 0px solid;left:-40px;
+}
+.f1:hover .s
+{
+display:block;width:60px; height:25px; color:#993366;position:relative; left:0px; top:0px; border-left:#996633 5px solid; }
+
+.f2:hover .ul
+{
+border:#000000 0px solid;  left:-40px;
+}
+.f2:hover .s
+{
+display:block;
+width:60px; height:25px; color:#993366; position:relative; left:0px; top:0px; border-left:#996633 5px solid; }
+.f1:hover .d
+{
+display:block;width:100px; height:20px;  color:#00FF00; border-radius:10px 0px 0px 0; border-left:#996633  5px solid;}
+.f2:hover .d
+{
+display:block;width:100px; height:20px;  color:#00FF00;  border-radius:10px 0px 0px 0; border-left:#996633  5px solid;}
+.f1{
+width:30px; height:30px;   list-style:none; cursor:pointer; margin-left:5px; float:left; position:relative;top:0px; left:-40px; border-radius:25px;}
+.f2{
+width:30px; height:30px;   list-style:none; cursor:pointer; margin-left:15px; float:left; position:relative; left:-40px;border-radius:25px;}
+.f1:hover {
+ 
+
+}
+.f1 li img{
+  transition:All 0.4s ease-in-out;
+  -webkit-transition:All 0.4s ease-in-out;
+  -moz-transition:All 0.4s ease-in-out;
+  -o-transition:All 0.4s ease-in-out;
+}
+.f2 li img{
+  transition:All 0.4s ease-in-out;
+  -webkit-transition:All 0.4s ease-in-out;
+  -moz-transition:All 0.4s ease-in-out;
+  -o-transition:All 0.4s ease-in-out;
+}
+.f1 li img:hover{ 
+transform: rotate( 540deg)scale(1.5,-1.5);
+-o-transform: rotate( 540deg)scale(1.5,-1.5);
+-webkit-transform: rotate(540deg)scale(1.5,-1.5);
+-moz-transform: rotate( 5400deg)scale(1.5,-1.5);
+}
+.f2 li img:hover{ 
+transform: rotate( 900deg)scale(1.5,-1.5);
+-o-transform: rotate( 900deg)scale(1.5,-1.5);
+-webkit-transform: rotate(900deg)scale(1.5,-1.5);
+-moz-transform: rotate( 900deg)scale(1.5,-1.5);
+}
+.f2:hover {
+ 
+}
+.d{
+width:100px; height:20px; display:none; }
+.ul{
+margin:2px; position:relative; top:auto; left:20px;}
+.f1:hover .s:hover {
+border: #99CCCC outset 2px;border-radius:0px 10px 10px 0px; border-left: #996633 3px  outset;background: #FFFFFF}
+ 
+.f2:hover .s:hover {
+border: #99CCCC outset 2px; border-radius:0px 10px 10px 0px; border-left: #996633 3px  outset;background: #FFFFFF}
+ .first{ width:300px; height:80px; border: solid 1px solid;  float:left; padding-left:0px; position:absolute; top:300px; left:150px; display:none}
+ 
+ .logo1{ position:absolute;top:200px; left:200px; float:right;}
+ .logo1:hover{ 
+transform: rotate( 180deg)scale(1,-1);
+-o-transform: rotate( 180deg)scale(1,-1);
+-webkit-transform: rotate(180deg)scale(1,-1);
+-moz-transform: rotate( 180deg)scale(1,-1);
+}
+ .a{border:#000000 solid 0px;float:left; width:600px; height:500px;position:fixed;* position:absolute; top:-200px; left:-200px; border:1px solid red;}
+   
+  .chart{ width:260px; height:50px;  position:fixed;*position:absolute; top:160px; left:50px; float:left; display:none;}
+ .p{ position:relative;top:130px; left:550px; z-index:999; position:fixed; top:10%; left:10%}
+  
+
+ .s1{ width:100px;  height:20px; float:left; border: #000000 solid 0px;  position:relative; top:5px; left:10px; border-radius:30px; padding-left:5px; background-color: transparent;}
+ .s2{ width:100px;    height:20px; float:left; border: #000000 solid 0px; position:relative; top:15px; left:10px; border-radius:30px; padding-left:5px; background-color: transparent;}
+ .show{ width:150px; height:100px; border: #000000 solid 0px; float:right; margin-right:5px; margin-top:85px; position:fixed;*position:absolute; top:-240px; left:0px;}
+ 
+</style>
+
+
+ <script src="jquery-1.4.2.min.js"></script>
+
+<script>
+ var rDrag = {
+	 o:null,
+	  init:function(o){
+	  o.onmousedown = this.start;
+	 },
+	 start:function(e){
+	  var o;
+	  e = rDrag.fixEvent(e);
+				   e.preventDefault && e.preventDefault();
+				   rDrag.o = o = this;
+	  o.x = e.clientX - rDrag.o.offsetLeft;
+					o.y = e.clientY - rDrag.o.offsetTop;
+	  document.onmousemove = rDrag.move;
+	  document.onmouseup = rDrag.end;
+ },
+ move:function(e){
+	  e = rDrag.fixEvent(e);
+	  var oLeft,oTop;
+	  oLeft = e.clientX - rDrag.o.x;
+	  oTop = e.clientY - rDrag.o.y;
+	  rDrag.o.style.left = oLeft + 'px';
+	  rDrag.o.style.top = oTop + 'px';
+ },
+ end:function(e){
+	  e = rDrag.fixEvent(e);
+	  rDrag.o = document.onmousemove = document.onmouseup = null;
+  
+ },
+ fixEvent: function(e){
+        if (!e) {
+            e = window.event;
+            e.target = e.srcElement;
+            e.layerX = e.offsetX;
+            e.layerY = e.offsetY;
+          }return e;
+		 
+  }
+}
+	window.onload = function(){
+        var obj = document.getElementById('a');
+		rDrag.init(obj);
+	} 
+	
+	function mouseover(){ 
+		document.getElementById("m").style.display="inline";
+	}
+
+
+function mouse1(){
+	var o=document.getElementById("a");
+	var i=o.offsetTop;
+	var h=o.offsetLeft;
+	
+	
+	
+	document.getElementById("chart").style.left=h;
+
+	 
+	document.getElementById("chart").style.display="inline"; 
+	 
+	   
+}
+
+	function mouseout() {
+		document.getElementById("m").style.display="none";
+		 var atop=document.getElementById("a").offsetTop;
+	    
+	   var aleft=document.getElementById("a").offsetLeft;
+             if(atop<=-200)
+			{  
+			document.getElementById("a").style.position = "fixed*absolute"; 
+			document.getElementById("a").style.top = "-200px";
+			document.getElementById("a").style.left = "aleft";
+			}
+			  if(atop>=300)
+			{  
+			document.getElementById("a").style.position = "fixed*absolute"; 
+			document.getElementById("a").style.top = "300px";
+			document.getElementById("a").style.left = "aleft";
+			}
+			if(aleft>=1024)
+			{  
+			document.getElementById("a").style.position = "fixed*absolute"; 
+			document.getElementById("a").style.top = "atop";
+			document.getElementById("a").style.left = "1024px";
+			}
+			if(aleft<=-200)
+			{  
+			document.getElementById("a").style.position = "fixed*absolute"; 
+			document.getElementById("a").style.top = "atop";
+			document.getElementById("a").style.left = "-200px";
+			}
+		
+		  
+	}
+	function mouseout1() {
+	if(
+	document.getElementById("chart").style.display=="inline"){
+	 
+	document.getElementById("chart").style.display="none";}
+	 
+	}
+	 
+	function a(){var o=document.getElementById("a");
+	
+		var i=o.offsetTop;
+		var h=o.offsetLeft;
+		$("#chart").css("top",i+360);
+	   $("#chart").css("left",h+110);
+		$("#show").css("top",i+0);
+	   $("#show").css("left",h+340)
+   		 var sstop=document.getElementById("show").offsetTop;
+	            var ssleft=document.getElementById("show").offsetLeft;
+			  
+				      if(sstop<=-20)
+			{  
+			document.getElementById("a").style.position = "fixed*absolute"; 
+			document.getElementById("show").style.top = "-80px";
+			document.getElementById("show").style.left = "ssleft";
+			}
+			 
+			 if(ssleft>1340)
+			{  
+			
+			document.getElementById("a").style.position = "fixed*absolute"; 
+ 			document.getElementById("show").style.top = "sstop";
+			document.getElementById("show").style.left = "1100px";
+			}
+					      if(sstop>500)
+			{  
+			document.getElementById("a").style.position = "fixed*absolute"; 
+			document.getElementById("show").style.top = "400px";
+			document.getElementById("show").style.left = "ssleft";
+			}
+				 if(ssleft<100)
+			{  
+			
+			document.getElementById("a").style.position = "fixed*absolute"; 
+ 			document.getElementById("show").style.top = "sstop";
+			document.getElementById("show").style.left = "100px";
+			}
+			 
+		
+  }
+
+     
+	 function sss(){
+        var p=document.getElementById("chart1");
+		 var p1=document.getElementById("p1");
+		  var p2=document.getElementById("p2");
+   			   p1.value=p2.value;
+ 			   p2.value=p.value;
+                p.value="";
+ 				if(p2.value!="")
+               {p2.style.backgroundColor="#66CCFF";}
+			    if(p2.value=="")
+				{p2.style.backgroundColor="transparent";}
+				if(p1.value!="")
+               {p1.style.backgroundColor=" #CCFFFF";}
+			    if(p1.value=="")
+				{p1.style.backgroundColor="transparent";}
+				 var sstop=document.getElementById("show").offsetTop;
+	            var ssleft=document.getElementById("show").offsetLeft;
+		
+		
+			      var s=document.getElementById("p2").value;
+       var b=document.getElementById("xr");
+	  if(s.indexOf("哭")>-1)
+{ b.innerHTML="<div style='position:absolute;top:200px; left:200px; float:right; width:120px;height:120px;border:#000000 solid 1px;background:url(111.gif) no-repeat;'></div>"
+ }
+			   
+			   
+				      if(sstop<=-50)
+			{  
+			document.getElementById("a").style.position = "fixed*absolute"; 
+			document.getElementById("show").style.top = "-80px";
+			document.getElementById("show").style.left = "ssleft";
+			}
+			 
+			 if(ssleft>1200)
+			{  
+			
+			document.getElementById("a").style.position = "fixed*absolute"; 
+			 
+			document.getElementById("show").style.top = "sstop";
+			document.getElementById("show").style.left = "980px";
+			}
+			 
+			 
+		
+				 
+  	 }
+   
+      
+</script>
+</head>
+<body >
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      
+<div class="a" id="a"  onMouseOver="mouseover()" onmouseout="mouseout()" onclick="a()"   >
+    <div class="show"  id="show">
+      <input id="p1"   class="s1"/>
+       <input id="p2" class="s2" />
+       
+	</div>
+<div class="first" id="m">
+  <ul>
+	<div class="f1" id="f2"><li><img src="img/1.gif"  width="30px;" height="30px;"onclick="mouse1()"/>
+       <ul class="ul"> 
+	  
+	  </ul></li></div>
+         
+    <div class="f2"  ><li><img src="img/2.gif"  width="30px;" height="30px;" onclick="mouseout1()"/>
+	    <ul class="ul"> 
+		<li class="d"></li>
+	   <li class="s">aaa</li>
+	   <li class="s">aaa</li>
+	   <li class="s">aaa</li>
+	   <li class="s">aaa</li>
+	 </ul>
+	
+	
+	</li></div>
+	 
+	 <div class="f2"><li><img src="img/3.gif"  width="30px;" height="30px;"  onclick="mouseout1()"/>
+	 <ul class="ul"> 
+	   <li class="d"></li>
+	   <li class="s">sss</li>
+	   <li class="s">sss</li>
+	   <li class="s">sss</li>
+	   <li class="s">sss</li>
+	 </ul></li></div>
+	  
+	  <div class="f2"><li><img src="img/4.gif"  width="30px;" height="30px;"   onclick="mouseout1()"/>
+	  <ul class="ul"> 
+		   <li class="d"></li>
+	  	   <li class="s">ddd</li>
+		   <li class="s">ddd</li>
+	       <li class="s">ddd</li>
+	       <li class="s">ddd</li>
+	 </ul>
+	 </li>
+	 </div>
+	  
+	   <div class="f2"><li><img src="img/5.gif" width="30px;" height="30px;"  onclick="mouseout1()"/>
+		   <ul class="ul"> 
+			   <li class="d"></li>
+			   <li class="s">ddd</li>
+			   <li class="s">ddd</li>
+			   <li class="s">ddd</li>
+			   <li class="s">ddd</li>
+			</ul>
+		</li>
+	 </div>
+	</ul>
+</div>
+	<div id="xr">
+		<img src="img/logo1.jpg"  class="logo1" width="100px;"  height="100px;"    onclick="mouseout()" />
+	</div>
+
+ 
+
+
+ </div>
+ 
+ <form name="form" class="chart" id="chart"> 
+    <div>
+	 <img src="img/12 (5).jpg" />
+	 <img src="img/12.jpg" />
+	 <img src="img/12 (4).jpg" />
+	 <img src="img/12 (1).jpg" />
+	 <img src="img/12 (7).jpg" />
+	 <img src="img/13.jpg" />
+	 <img src="img/12 (2).jpg" />
+	 <img src="img/12 (3).jpg" />
+	 <img src="img/12 (6).jpg"/>
+	 
+    </div>
+	   <br />
+ <textarea rows="4" cols="35" name="editor01" id="chart1">请输入</textarea>
+ 
+ <br /> <br />
+ 
+ 
+  <input type="button" value="关闭" onclick=" mouseout1()" />
+  <input type="button"  value="发送"   id="send" onclick="sss()"/>
+</form>
+
+ 
+</body>
+</html>
+

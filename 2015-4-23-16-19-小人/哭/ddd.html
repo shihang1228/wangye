@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="°×²Ë±à¼­²¿">
+<title>°×²Ë±à¼­²¿</title>
+<style>
+div#wrap {
+    margin: auto;
+    width: 950px;
+    height: 610px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+ 
+div#mouse {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #F00;
+    left: 158px;
+    top: 9px;
+}
+</style>
+<script type="text/javascript">
+    document.onmousemove = function (e)
+    {
+        e = e || window.event;
+        x = e.clientX;
+        y = e.clientY;
+        var me = this;
+        !me.coordinates ? me.coordinates = [] : 0;
+        me.coordinates.push (
+        {
+            x : x,
+            y : y
+        });
+        me.index = null != me.index ? me.index : 0;
+        clearInterval (me.interval);
+        var temp = /.*chrome.*/i.test (navigator.userAgent) ? me.body : me.documentElement;
+        me.interval = setInterval (function ()
+        {
+            var left = me.coordinates[me.index].x + temp.scrollLeft - mouse.clientWidth / 2;
+            left = left < wrap.offsetLeft ? wrap.offsetLeft : left;
+            left = left > wrap.offsetLeft + wrap.clientWidth - mouse.clientWidth ? wrap.offsetLeft + wrap.clientWidth
+                    - mouse.clientWidth : left;
+             
+            var top = me.coordinates[me.index].y + temp.scrollTop - mouse.clientHeight / 2;
+            top = top < wrap.offsetTop ? wrap.offsetTop : top;
+            top = top > wrap.offsetTop + wrap.clientHeight - mouse.clientHeight ? wrap.offsetTop + wrap.clientHeight
+                    - mouse.clientHeight : top;
+             
+            mouse.style.left = left + 'px';
+            mouse.style.top = top + 'px';
+            me.title = left + ',' + top;
+            me.index++;
+            if (me.index > me.coordinates.length - 1)
+            {
+                clearInterval (me.interval);
+                me.index = 0;
+                me.coordinates = [];
+            }
+        }, !!me.sleep ? me.sleep : me.sleep = 16);
+    };
+</script>
+</head>
+<body>
+    <div id="wrap"></div>
+    <div id="mouse"></div>
+</body>
+</html>

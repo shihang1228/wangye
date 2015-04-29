@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div, dl, dt, dd, input{margin: 0; padding: 0; font-family:'微软雅黑';}
+body{font-size: 12px;background:#fff;}
+img{border: none;}
+ul li{list-style:none;}
+input, select, textarea{outline: none; border: none; background: none;}
+textarea{resize: none;}
+a{text-decoration: none;color: #000;}
+
+/*清除浮动*/
+.clear{clear:both;}
+.clearfix:after{content: ""; display: block; clear: both;}
+.clearfix{zoom: 1;}
+.fl{float: left;}
+.fr{float: right;}
+
+/*公用*/
+h4,h3{color:#666;}
+span{color:#ff0000;}
+.sticky{position:fixed;top:200px;left:1006px;}
+.active{background:#f4a417;color:#fff;}
+
+.comWidth{width: 1000px; margin-left: 150px; margin-right: auto;}
+.leftArea{float: left;}
+.rightArea{float: right;}
+

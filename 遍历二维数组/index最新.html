@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+		<title>html模板</title>
+		<meta name="Keywords" content="关键词，关键词">
+		<meta name="description" content="">
+
+		<style>
+			*{margin:0;padding:0;}
+			body{font-size:14px;font-family:"微软雅黑"}
+		</style>
+	 </head>
+ <body>
+	<input type="text" id="shuru" />
+	<input type="submit" id="tijiao" value="提交" onclick="test()" />
+
+
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+
+		function test() {
+			var output = "";
+			var shuru = document.getElementById("shuru").value;
+			
+			var array1 = [["哭","悲伤"],["笑","高兴"]];			
+			var array2 = [];
+			/*将所包含的关键字放到一个新的数组中*/
+			for(var i = 0; i < array1.length; i++){
+				for(var k = 0; k < array1[i].length; k++) {
+					if(shuru.indexOf(array1[i][k]) != -1){
+						array2.push(array1[i][k]);
+					}	
+				}
+			}
+			
+			/*冒泡排序*/	
+			for(var i=0;i<array2.length;i++){
+				//内层循环，找到第i大的元素，并将其和第i个元素交换
+				for(var j=i;j<array2.length;j++){
+					if(shuru.indexOf(array2[i]) > shuru.indexOf(array2[j])){
+						//交换两个元素的位置
+						var temp=array2[i];
+						array2[i]=array2[j];
+						array2[j]=temp;
+					}
+				}
+			}
+			alert(array2[0]);
+
+			/*查找某个字符串是否在某个数组中*/
+			Array.prototype.S = String.fromCharCode(2);  
+			Array.prototype.in_array = function(e) {  
+				var r = new RegExp(this.S+e+this.S);  
+				return (r.test(this.S+this.join(this.S)+this.S));  
+			}
+		
+		/*查找关键字在哪个数组里*/
+		for(var i = 0; i < array1.length; i++) {
+			if(array1[i].in_array(array2[0])){
+				alert(array1[i]);
+			}
+		}
+
+}
+
+
+		  
+		
+	</script>
+ </body>
+</html>

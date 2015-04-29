@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+		<title>html模板</title>
+		<meta name="Keywords" content="关键词，关键词">
+		<meta name="description" content="">
+
+		<style>
+			*{margin:0;padding:0;}
+			body{font-size:14px;font-family:"微软雅黑"}
+		</style>
+	 </head>
+ <body>
+	<input type="text" id="shuru" />
+	<input type="submit" id="tijiao" value="提交" onclick="test()" />
+
+
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+
+		Array.prototype.S = String.fromCharCode(2);  
+		Array.prototype.in_array = function(e) {  
+			var r = new RegExp(this.S+e+this.S);  
+			return (r.test(this.S+this.join(this.S)+this.S));  
+		}
+
+
+		function test() {
+			var output = "";
+			var shuru = document.getElementById("shuru").value;
+			
+			var array1 = [["哭","悲伤"],["笑","高兴"]];
+			var flag = true;
+			
+			var array2 = [];
+
+			for(var i = 0; i < array1.length; i++){
+
+				if(flag == false) {
+						break;
+				}
+
+				for(var k = 0; k < array1[i].length; k++) {
+					if(shuru.indexOf(array1[i][k]) != -1){
+						/*alert("表情是："+ array1[i][k]);
+						flag = false;
+						break;*/
+						array2.push(array1[i][k]);
+						//alert(array2[array2.length-1]);
+
+					}
+					
+					
+				}
+
+			}
+			var length2 = array2.length-1;
+			alert(array2[length2]);
+
+		}
+
+
+		  
+		
+	</script>
+ </body>
+</html>

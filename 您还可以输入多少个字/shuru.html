@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+		<title>html模板</title>
+		<meta name="Keywords" content="关键词，关键词">
+		<meta name="description" content="">
+
+		<style>
+			*{margin:0;padding:0;}
+			body{font-size:14px;font-family:"微软雅黑"}
+			textarea {width:300px; height:160px;}
+			strong {color:#F00;}
+
+
+		</style>
+	 </head>
+ <body>
+	
+	<textarea></textarea>
+	<span>您还可以输入<strong>140</strong>个字</span>
+	
+
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+		var maxLen=140;  // 定义最多输入多少字
+		$("textarea").keyup(function(e) {   // textarea 键盘输入时
+		var textLen=$(this).val().length;   // 获取textarea的字数
+		$("strong").text(maxLen-textLen);  // strong的text 140 被替换为  最多输入的字数-textarea内的字数
+		if(parseInt($("strong").text())<0){  // 如果strong内的text 140 小于 0 的时候
+			$("strong").text('0');  // strong的text还是替换为0
+			var val=$(this).val().substring(0,140); // 输入的字数多于140个字时，输入不到textarea框内
+			$(this).val(val);
+		}
+});
+		
+	</script>
+ </body>
+</html>

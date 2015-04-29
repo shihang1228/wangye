@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>向上循环滚动的图片展示效果</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--把下面代码加到<head>与</head>之间-->
+<style type="text/css">
+#ad{
+position:absolute;
+width:150px;
+height:200px;
+border:1px solid #000;
+overflow:hidden;
+}
+#adul{
+position:absolute;
+list-style-type:none;
+margin:0;
+padding:0;
+}
+</style>
+<script language="javascript">
+var ad = {
+o:null,      // 存放滚动的UL
+cloneImg:null,      //克隆UL的第一个图片
+adY:0,      //滚动值
+distan:0,     //每个图片的高度
+init:function(obj){
+if(!obj.style.top){
+   obj.style.top = '0px';
+}
+this.cloneImg = obj.firstChild.cloneNode(true);     //克隆第一个节点
+if(this.cloneImg.nodeType == 3) this.cloneImg = obj.firstChild.nextSibling.cloneNode(true);   //除IE外第一个节点为文本节点,这里做点调整,让克隆节点还是指向第一个元素
+obj.appendChild(this.cloneImg);   //让克隆的节点放入最后
+this.adY = parseInt(obj.style.top);
+this.o = obj;
+this.distan = this.cloneImg.offsetHeight;   //获取高度
+this.moveCtrl();
+},
+moveCtrl:function(){
+if(Math.abs(this.adY) == this.o.offsetHeight - this.distan) this.adY = 0; //当到达底部,让滚动直接跳回最上面
+if(Math.abs(this.adY)%this.distan==0){
+   setTimeout('ad.moveCtrl()',2000);   //对每个图片做停留,也就是延迟函数的循环
+} else {
+   setTimeout('ad.moveCtrl()',10);    //运动循环
+}
+--this.adY;
+ad.o.style.top = this.adY + 'px';
+}
+}
+window.onload = function(){
+var obj = document.getElementById('adul');
+ad.init(obj);   //直接把UL放入类里,就可以用了,类已基本封装好
+}
+</script>
+</head>
+<body>
+<!--把下面代码加到<body>与</body>之间-->
+<div id="ad">
+<div id="adul">
+    <div><img src="http://www.zzsky.cn/effect/images/huandeng1.jpg" width="150" height="200"></div>
+    <div><img src="http://www.zzsky.cn/effect/images/huandeng2.jpg" width="150" height="200"></div>
+    <div><img src="http://www.zzsky.cn/effect/images/huandeng3.jpg" width="150" height="200"></div>
+    <div><img src="http://www.zzsky.cn/effect/images/huandeng4.jpg" width="150" height="200"></div>
+    <div><img src="http://www.zzsky.cn/effect/images/huandeng5.jpg" width="150" height="200"></div>
+</div>
+</div>
+</body>
+</html>
+

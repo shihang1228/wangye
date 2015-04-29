@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+		<title>html模板</title>
+		<meta name="Keywords" content="关键词，关键词">
+		<meta name="description" content="">
+
+		<style>
+			.sticky{position:fixed;top:20%;left:46%;}
+			.active{background:#f4a417;color:#fff;}
+			
+			.clear{clear:both;}
+			h4,h3{color:#666;}
+			span{color:#ff0000;}
+			body{font-size:14px;font-family:"微软雅黑"}
+			.pic_browse{width:1200px;height:1080px;margin:0 auto;}
+			/*左侧 其他人也在看模块*/
+			.pic_browse .pic_look{width:135px;height:686px;float:left;margin-top:120px;}
+			.pic_browse .pic_look h3{margin-bottom:20px;margin-left:6px;}
+			.pic_browse .pic_look ul{background:#f4f4f4;}
+			.pic_browse .pic_look ul li{list-style:none;text-align:center;border-top:1px dashed #ccc;height:165px;}		
+			.pic_browse .pic_look ul li a{display:block;width:92px;height:123px;margin:10px 21px;}
+			.pic_browse .pic_look ul li p{color:#666;font-family:"微软雅黑";}
+			
+			/*图片展示区*/
+			.pic_browse .pic_scan{width:620px;height:1000px;margin-left:160px;float:left;margin-top:10px;display:table;}
+			.pic_browse .pic_scan .p_top{width:620px;height:60px;background:#000;text-align:center;position:fixed;top:10px;}
+			.pic_browse .pic_scan .p_top .exit{width:18px;height:18px;display:block;float:left;margin:30px 0 0 7px;}
+			.pic_browse .pic_scan .p_top .p_title{color:#fff;float:left;text-align:center;width:364px;margin-left:103px;font-size:17px;margin-top:20px;}
+			.pic_browse .pic_scan .p_top .p_dianzan{width:18px;height:18px;display:block;float:left;margin:30px 0 0 60px;}
+			.pic_browse .pic_scan .p_top .p_transmit{width:18px;height:18px;display:block;float:left;margin:30px 0 0 17px;}
+			
+			.pic_browse .pic_scan .p_content a{margin:15px 0;display:block;}
+			.pic_browse .pic_scan .p_bottom{width:500px;height:180px;background:url("images/radius.png") no-repeat;margin-left:60px;text-align:center;}
+			.pic_browse .pic_scan .p_bottom h3{margin:12px auto;width:157px;height: 30px;line-height:42px;}
+			.pic_browse .pic_scan .p_bottom ul{width:390px;height:72px;text-align:center;margin:20px 55px;}
+			.pic_browse .pic_scan .p_bottom ul li{width:70px;height:70px;float:left;list-style:none;margin-left:5px;background:#fff;}
+			
+			/*图片评论区*/
+			.pic_browse .pic_review{width:235px;margin-left:30px;float:left;margin-top:70px;}
+			.pic_browse .pic_review .pic_title{width:208px;height:94px;padding:8px 13px;line-height:23px;border:1px solid #c9ccd3;}
+			.pic_browse .pic_review .pic_icon{width:235px;height:25px;background:#c9ccd3;position:relative;}
+			.pic_browse .pic_review .pic_icon .zan{width:50px;height:25px;line-height:25px;margin:0 15px;}
+			.pic_browse .pic_review .pic_icon .zan img{margin-right:5px;}
+			.pic_browse .pic_review .pic_icon .zhuan{width:50px;height:25px;line-height:25px;margin-right:10px;}
+			
+			.pic_browse .pic_review .pic_icon .redline{position:absolute;top:5px;left:141px;}
+			.pic_browse .pic_review .pic_icon .look{z-index:999;display:none;}
+			.pic_browse .pic_review .dis_list{width:235px;height:500px;margin-top:10px;display:none;}
+
+			.pic_browse .pic_review .dis_list .dis_pinglun ul li{width:228px;height:82px;border-bottom:1px solid #ccc;list-style:none;padding:8px 0 0 7px;background:#f4f4f4;}
+			.pic_browse .pic_review .dis_list .dis_img{width:35px;height:35px;background:#777;float:left;}
+			.pic_browse .pic_review .dis_list .dis_pinglun ul li .dis_cnt{float:left;width:184px;height:78px;margin-left:6px;font-size:12px;}
+			.pic_browse .pic_review .dis_list .dis_pinglun ul li .dis_cnt p{width:157px;height:43px;line-height:21px;}
+			.pic_browse .pic_review .dis_list .dis_huifu{width:187px;height:24px;line-height:25px;}
+			.pic_browse .pic_review .dis_list .dis_huifu .dis_jia{float:left;margin-left:135px;margin-top:9px;}
+			.pic_browse .pic_review .dis_list .dis_huifu .dis_hui{float:right;margin-top:9px;}
+
+			.pic_browse .pic_review .dis_list .page{width:228px;height:35px;}
+			.pic_browse .pic_review .dis_list .page ul{width:218px;height:22px;margin:6px auto;padding-left:7px;}
+			.pic_browse .pic_review .dis_list .page ul li{list-style:none;float:left;width:30px;height:20px;text-align:center;line-height:20px;margin:0 2px;border-radius:3px;}
+			.pic_browse .pic_review .dis_list .dis_pinglun ul .last{border:0;}
+
+			.pic_browse .pic_review .dis_list .page ul li a{width:30px;height:20px;display:block;float:left;text-decoration:none;border-radius:3px;}
+			.pic_browse .pic_review .dis_comment{width:205px;height:75px;padding:15px;background:#f4f4f4;}
+			.pic_browse .pic_review .dis_comment .dis_text{width:155px;height:35px;float:left;margin-left:10px;text-indent:0.5em;font-size:12px;background:#fff;padding-top:5px;border:1px solid #ddd;color:#919191;}
+			.pic_browse .pic_review .dis_comment .dis_commit{width:50px;height:25px;border:none;background:#f4a417;color:#fff;margin:10px 0 15px 152px;}
+
+		</style>
+	 </head>
+ <body>
+	<div class="pic_browse">
+		<div class="pic_look">
+			<h3>其他人也在看</h3>
+			<ul>
+				<li>
+					<a href="#"><img src="images/pic1.png" alt="" width="92" height="123"/></a>
+					<p>麦拉风的相册</p>
+				</li>
+				<li>
+					<a href="#"><img src="images/pic1.png" alt="" width="92" height="123"/></a>
+					<p>麦拉风的相册</p>
+				</li>
+				<li>
+					<a href="#"><img src="images/pic1.png" alt="" width="92" height="123"/></a>
+					<p>麦拉风的相册</p>
+				</li>
+				<li>
+					<a href="#"><img src="images/pic1.png" alt="" width="92" height="123"/></a>
+					<p>麦拉风的相册</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="pic_scan" id="content">
+			<div class="p_top">
+				<a href="#" class="exit"><img src="images/exit.png" width="18" height="18" alt="退出" /></a>
+				<h3 class="p_title">月亮女生的相册</h3>
+				<a href="#" class="p_dianzan"><img src="images/q_dianzan.png" width="18" height="18" alt="点赞" /></a>
+				<a href="#" class="p_transmit"><img src="images/q_transmit.png" width="18" height="18" alt="转发" /></a>
+			</div>
+
+			<div class="p_content">
+				<div class="item">
+					<ul>
+						<li><a href="#item1"><img src="images/pic_1.png" alt="图一" width="621" height="592" /></a></li>
+						<li><a href="#item2"><img src="images/pic_2.png" alt="图二" width="621" height="206" /></a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="p_bottom" id="item1">
+				<h3>已经是最后一张了！</h3>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<h4>本网站还有<span>5666000</span>套大图可以全屏浏览，<a href="#">随便逛逛</a>&gt;&gt;</h4>
+			</div>
+		</div>
+
+		<div class="pic_review">
+			<div class="pic_title">
+				<p>月票通通都给我月票通通都给我</p>
+				<p>月票通通都给我月票通通都给我</p>
+				<p>月票通通都给我月票通通都给我</p>
+				<p>月票通通都给我月票通通都给我</p>
+			</div>
+			<div class="pic_discuss">
+				<div class="pic_icon">
+					<a href="#" class="zan"><img src="images/dianzan.png" alt="点赞" width="13" height="13"/>5000</a>
+					<a href="#" class="zhuan"><img src="images/transmit.png" alt="转发" width="13" height="13"/>5000</a>
+					<i class="look"><img src="images/look.png" alt="查看" width="14" height="9"/></i>
+					<i class="redline"><img src="images/redline.png" alt="禁止" width="14" height="11" /></i>
+				</div>
+				<div class="dis_list">
+					<div class="dis_pinglun">
+						<ul>
+							<li>
+								<a href="#" class="dis_img"></a>
+								<div class="dis_cnt">
+									<h4>桃子的李子</h4>
+									<p>说的话说的话说的话说的话说的话说的话说的话说的话说的</p>
+									<div class="dis_huifu">
+										<a href="#" class="dis_jia"><img src="images/jia.png" alt="" width="25" height="15"/></a>
+										<a href="#" class="dis_hui"><img src="images/huifu.png" alt="" width="25" height="15"/></a>
+									</div>
+								</div>
+							</li>
+							
+							<li>
+								<a href="#" class="dis_img"></a>
+								<div class="dis_cnt">
+									<h4>桃子的李子</h4>
+									<p>说的话说的话说的话说的话说的话说的话说的话说的话说的</p>
+									<div class="dis_huifu">
+										<a href="#" class="dis_jia"><img src="images/jia.png" alt="" width="25" height="15"/></a>
+										<a href="#" class="dis_hui"><img src="images/huifu.png" alt="" width="25" height="15"/></a>
+									</div>
+								</div>
+							</li>
+
+							<li>
+								<a href="#" class="dis_img"></a>
+								<div class="dis_cnt">
+									<h4>桃子的李子</h4>
+									<p>说的话说的话说的话说的话说的话说的话说的话说的话说的</p>
+									<div class="dis_huifu">
+										<a href="#" class="dis_jia"><img src="images/jia.png" alt="" width="25" height="15"/></a>
+										<a href="#" class="dis_hui"><img src="images/huifu.png" alt="" width="25" height="15"/></a>
+									</div>
+								</div>
+							</li>
+
+							<li>
+								<a href="#" class="dis_img"></a>
+								<div class="dis_cnt">
+									<h4>桃子的李子</h4>
+									<p>说的话说的话说的话说的话说的话说的话说的话说的话说的</p>
+									<div class="dis_huifu">
+										<a href="#" class="dis_jia"><img src="images/jia.png" alt="" width="25" height="15"/></a>
+										<a href="#" class="dis_hui"><img src="images/huifu.png" alt="" width="25" height="15"/></a>
+									</div>
+								</div>
+							</li>
+
+							<li>
+								<a href="#" class="dis_img"></a>
+								<div class="dis_cnt">
+									<h4>桃子的李子</h4>
+									<p>说的话说的话说的话说的话说的话说的话说的话说的话说的</p>
+									<div class="dis_huifu">
+										<a href="#" class="dis_jia"><img src="images/jia.png" alt="" width="25" height="15"/></a>
+										<a href="#" class="dis_hui"><img src="images/huifu.png" alt="" width="25" height="15"/></a>
+									</div>
+								</div>
+							</li>
+
+							<li class="last">
+								<a href="#" class="dis_img"></a>
+								<div class="dis_cnt">
+									<h4>桃子的李子</h4>
+									<p>说的话说的话说的话说的话说的话说的话说的话说的话说的</p>
+									<div class="dis_huifu">
+										<a href="#" class="dis_jia"><img src="images/jia.png" alt="" width="25" height="15"/></a>
+										<a href="#" class="dis_hui"><img src="images/huifu.png" alt="" width="25" height="15"/></a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="page">
+						<ul>
+							<li><a href="">&lt;&lt;</a></li>
+							<li><a href="">1</a></li>
+							<li><a href="">2</a></li>
+							<li><a href="">3</a></li>
+							<li><a href="">4</a></li>
+							<li><a href="">&gt;&gt;</a></li>
+						</ul>
+					</div>	
+				</div>
+
+				<div class="dis_comment">
+					<a href="#" class="dis_img"></a>
+					<div class="dis_text" contentEditable="true">@桃子的样子</div>
+					<input type="submit" class="dis_commit" value="评论"/>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".page ul li a").hover(function(){
+				$(this).addClass("active");
+			},function(){
+				$(this).removeClass("active");
+			});
+
+	
+			/*查看评论的显示和隐藏*/
+				$(".pic_review .pic_discuss").find(".redline").toggle(
+				function(){
+					$(this).children("img").attr("src","images/look.png");
+					$(".pic_review").find(".dis_list").css("display","table");
+				},
+				function(){
+					$(this).children("img").attr("src","images/redline.png");
+					$(".pic_review").find(".dis_list").hide();
+				});
+
+		})
+	
+	</script>
+ </body>
+</html>

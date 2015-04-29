@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>关于我们</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<style type="text/css">
+		.clear{clear:both;}
+		.scroll_top{width:60px;height:50px;position:fixed;right:15px;bottom:100px;
+			display:none;
+			}
+			.scroll_top .s_cursor{width:60px;height:50px;display:block;
+				background:url("icon_top.png")	no-repeat center;
+				cursor: pointer;background-color:#444;box-shadow: 0 1px 3px rgba(0,0,0,.2);
+				border-radius:4px;
+			}
+		.icon{width:10px;height:26px;display:block;border-radius:2px;background:#f60;float:left;margin:4px 5px 0 0;}
+		.container .row .col-sm-9 h2{background: url(http://s1.vip.com/static/images/contact_us/dash.gif) repeat-x bottom;padding-bottom:20px;}
+		.container .row .col-sm-9 .img{width:658px;height:235px;margin-left:91px;}
+		.container .row .col-sm-9 .about h4{font-size:22px;padding-top:30px;font-weight:100;font-family:"微软雅黑";}
+		.container .row .col-sm-9 .about .bor_dashed{padding:10px 0;display:block;border-bottom: dashed 1px #CCCCCC;}
+
+		.container .row .col-sm-9 .option{width:700px;margin:11 auto;padding-top:20px;margin-left:50px;}
+		.container .row .col-sm-9 .option h3{margin:20px 0;}
+		.container .row .col-sm-9 .option p{font-size:14px;font-family:"微软雅黑";height:32px;line-height:29px;}
+		.container .row .col-sm-9 .option em{font-weight:bold;}
+		.container .row .col-sm-9 .option i{width:8px;height:17px;display:block;background:#66ff00;border-radius:2px;float:left; margin-right:4px;}
+
+		
+		.device{width:700px;margin:11 auto;padding-top:20px;float:left;margin-left:70px;}
+		.device input[type="text"]{width:508px;height:34px;border:1px solid #ccc;border-radius:5px 0 0 5px;outline:none;text-indent:0.5em;}
+		.device input[type="text"]:hover{border-color: rgba(82,168,236,.8);box-shadow: 0 0 8px rgba(82,168,236,.6);}
+		.device select{width:166px;height:35px;outline:none;border:1px solid #ccc;border-radius:0 5px 5px 0;color:#666;margin-left:-8px;}
+		
+		.device select:hover{border-color: rgba(82,168,236,.8);box-shadow: 0 0 8px rgba(82,168,236,.6);}
+
+		.device textarea{wrap:"virtual";height:100px;width:663px;border:1px solid #ccc;border-radius:5px;margin-top:20px;outline:none;padding:5px;resize:none;}
+		
+		.device textarea:hover{border-color: rgba(82,168,236,.8);box-shadow: 0 0 8px rgba(82,168,236,.6);}
+
+		.device a{margin:20px 0 0 580px;width:92px;height:34px;border-radius:4px;display:block;background:#3c6;text-decoration:none;text-align:center;line-height:34px;color:#fff;}
+		.device h3{color:#4a4442;text-align:left;margin:20px 0;}
+		.device hr{margin-bottom:20px;}
+		.device input[type="submit"]{margin:14px 0 0 609px;}
+
+		.container .row .col-sm-9 .source{width:800px;padding:20px;}
+		.container .row .col-sm-9 .source hr{margin:10px 0;}
+		.container .row .col-sm-9 .source .con1{color:#ff0033;text-indent:1em;}
+		.container .row .col-sm-9 .source .con{text-indent:1em;line-height:20px;color:#7b7f82;}
+		.container .row .col-sm-9 .source .email{margin-top:25px;text-align:left;}
+		.container .row .col-sm-9 .source .email strong{color:#0033cc;}
+		
+		.container .row .col-sm-9 .zhaopin{width:842px;height:300px;}
+		.container .row .col-sm-9 .zhaopin .col-sm-4 h2{font-size:22px;font-family:"微软雅黑";text-shadow:1px 1px 1px 1px #f66;color:#f63;text-align:center;line-height:50px;background:#99ffcc;height:50px;border-radius:8px;cursor:pointer;}
+		.container .row .col-sm-9 .zhaopin .col-sm-4 h2:hover{background:#99ffff;}
+		.container .row .col-sm-9 .zhaopin .col-sm-8 .sj{width:13px;height:16px;background:url("left.png") no-repeat; float:left; margin:23px 0 0 10px;}
+		.container .row .col-sm-9 .zhaopin .col-sm-8 .mes{width:450px;background:#000;float:left;border-radius:8px;
+				color:#ddd;font-size:14px;padding:10px 20px;}
+		.container .row .col-sm-9 .zhaopin .col-sm-8 .mes span{font-weight:bold;color:#66ff66;}
+
+			.footer{width: 900px;height: 150px;margin: 50px auto 10px auto;}
+			.footer hr{margin-top:20px;}
+			.footer p{height:32px;text-align:center;line-height:20px;font-size:12px;color:#aaa;padding-top:43px;}
+
+	</style>
+  </head>
+  <body data-spy="scroll" data-target=".navbar">
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+	<div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<span class="sr-only"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="#">香蕉点购</a>
+		</div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">关于我们<span class="sr-only">(current)</span></a></li>
+        <li><a href="#">加入我们</a></li>
+		<li><a href="#">联系我们</a></li>
+		<li><a href="#">意见反馈</a></li>
+		<li><a href="#">资源免费声明</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+	</div>
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-3">
+			 <div class="list-group">
+				  <a href="#relative" class="list-group-item active">关于我们</a>
+				  <a href="#contact" class="list-group-item">联系我们</a>
+				  <a href="#advice" class="list-group-item">意见反馈</a>
+				  <a href="#source" class="list-group-item">资源免费声明</a>
+				  <a href="#join" class="list-group-item">加入我们</a>
+			 </div>
+		</div>
+		<div class="col-sm-9">
+			<h2 id="relative"><i class="icon"></i>关于我们</h2>
+			<div class="img">
+				<img src="http://support.vip.com/static/images/contact_us_v3/hi_vip_pic_1_new.jpg" width="658" height="235" />
+			</div>
+			<div class="about">
+				<h4>香蕉点购与我们的相遇</h4>
+				<p><strong>亲爱的VIP：</strong></p>
+        <p>请允许我这样称呼您，</p>
+        <p>因为从您来到VIP.com开始，您就成为唯品会生命中最重要的人。</p>
+        <p>VIP于世人，是Very Important People；</p>
+        <p>VIP于唯品会，是为您奉上“精选商品”、“独享低价”、“尊享服务”的全方位尊贵体验；</p>
+        <p>VIP于您，是尽情享受品质生活、主宰自我潮流风范的潇洒自如：在唯品会，您就是时尚的VIP——不为款式纠结，既会一件钟情，也能万件穿心；不被潮流绑架，只范来张口，衣来伸手；不管流行准则，懂衣态万千，更能自成衣派……</p>
+        <p>您，与唯品会的相遇，注定就是时尚VIP的传奇。</p>
+        <div class="text_line"></div>
+        <h4>唯品会，只为VIP而生</h4><br>
+        <p class="bor_dashed"><strong class="color_dashed">唯品会，她是被誉为“唯美、品质、时尚汇”的特卖网站www.vip.com：</strong></p>
+        <p class="bor_dashed">● 在中国领创“名牌折扣+限时抢购+正品保障”的独特商业模式。</p>
+        <p class="bor_dashed">● 不断升级的“精选品牌正品+深度折扣+限时限量”特卖模式。</p>
+        <p class="bor_dashed">● 每天早上10点,100个品牌准时上新，涵盖时装、配饰、鞋、美容化妆品、箱包、家纺、皮具、香水、3C、母婴等。</p>
+        <p class="bor_dashed">● 为提升VIP们的购物体验，每天晚上8点，唯品会移动端增加了“晚8点专场”来满足VIP们的抢购欲望。</p>
+        <p class="bor_dashed">● 累积一万多个合作品牌，1600多个独家合作品牌，低至1折的超低折扣，3~5天的限时特卖，让精明的时尚达人轻松享受品质生活。</p>
+        <p class="bor_dashed height32_dashed"></p>
+        <p class="bor_dashed"><strong class="color_dashed">她是9000万VIP会员的“精明蜜友”加“甜蜜恋人”：</strong></p>
+        <p class="bor_dashed">● 目前，唯品会的“注册VIP”达9000万，日均订单量超30万单。</p>
+        <p class="bor_dashed">● 每天帮VIP们节省数亿元，超过70%的VIP们买了还会再买，从此陷入与唯品会日日约会的“缠绵热恋”，尽情享受商品、价格、服务的360度无死角惊喜。</p>
+        <p class="bor_dashed height32_dashed"></p>
+        <p class="bor_dashed"><strong class="color_dashed">她是自强不息、逆势上扬的美国纽交所股票代码VIPS：</strong></p>
+        <p class="bor_dashed">● 2012年3月23日，唯品会在美国纽交所上市，是华南首家在美国纽交所上市的电子商务企业。</p>
+        <p class="bor_dashed">● 目前，唯品会（NYSE:VIPS）公司市值已超过百亿美元，位居中国互联网公司排名前五。</p>
+        <p class="bor_dashed">● 从2008年8月正式成立，到登上纽交所，我们只花了三年多的时间，带着所有VIP的梦想和支持，创造了一个中国电商的传奇。</p>
+        <p class="bor_dashed">● 2014年截至9月30日，唯品会第三季度净营收达8.826亿美元，连续八个季度实现盈利，目前已成为全球最大的特卖电商，所代表的“特卖”模式也已成为国内三大主流电商业态之一。</p>
+        <p class="bor_dashed height32_dashed"></p>
+        <p class="bor_dashed"><strong class="color_dashed">她是怀抱“为我们的VIP们传承品质生活，提升幸福体验”的梦想，致力于成为全球一流电子商务平台的唯品会：</strong></p>
+        <p class="bor_dashed">● 发源于中国广州的唯品会和10000多名唯品人，正在为我们所有的VIP们更美丽的国际时尚梦想努力：未来，让我们一起创造不可估量的精彩！</p>
+        <h4>唯品会，一家专门做特卖的网站</h4><br><br>
+        <p><img src="http://support.vip.com/static/images/contact_us_v3/hi_vip_icon_02.png" width="30" height="33" /> <strong class="color_dashed">ery selective products“精选商品”</strong></p>
+        <p class="bor_dashed">1000多名时尚买手为VIP们搜罗一万多个合作品牌的优质产品， 通过100%太平洋正品保险和70项专业质</p>
+        <p class="bor_dashed">检确保品质，以超过70%的全网第一重复购买率成为9000多万蜜友的信赖之选。</p>
+        <span class="pad_dashed"><img src="http://support.vip.com/static/images/contact_us_v3/hi_vip_icon_03.png" width="657" height="106" /></span>
+        <p><img src="http://support.vip.com/static/images/contact_us_v3/hi_vip_icon_02.png" width="30" height="33" /> <strong class="color_dashed">ncredible price“独享低价”</strong></p>
+        <p class="bor_dashed">品牌正品天天1折起售，多种创新特卖形式，不断为VIP们创造惊喜；每天30万单订单，</p>
+        <p class="bor_dashed">每天为VIP们节省数亿元，让蜜友们享受到“尊贵不贵”的巨额让利。</p>
+        <span class="pad_dashed"><img src="http://support.vip.com/static/images/contact_us_v3/hi_vip_icon_05.png" width="657" height="106" /></span>
+        <p><img src="http://support.vip.com/static/images/contact_us_v3/hi_vip_icon_02.png" width="30" height="33" /> <strong class="color_dashed">rivilege services“尊享服务”</strong></p>
+        <p class="bor_dashed">我们关注服务的每一个细节，7天无条件退货并补贴运费，43种支付方式让支付安全自由，</p>
+        <p class="bor_dashed">1000多名客服365天贴心服务，10000名物流员工星夜兼程，全心全意将每一位蜜友视为VIP对待。</p>
+		<br><br><br>
+
+		<h2 id="contact"><i class="icon"></i>联系我们</h2>
+
+		<div class="option">
+			<p><em>QQ客服：</em>2798204080<img border="0" src="http://wpa.qq.com/pa?p=2:839046002:51" alt="点击这里给我发消息" title="点击这里给我发消息" style="margin-bottom:6px;vertical-align: middle"></p>
+			<p><em>邮箱：</em>xjdiangou@163.com</p>
+			<p><em>QQ群号：</em>92102927  224010917</p>
+			<p><em>电话：</em>400-011-9695</p>
+			<p><em>微博（腾讯）：</em>http://t.qq.com/xiangjiaodiangou?firstin#</p>
+		</div>
+		<br><br><br>
+
+		
+		<h2 id="advice"><i class="icon"></i>意见反馈</h2>
+		<p class="yijian">如果您在使用过程中对功能产生疑问或有任何关于网站改进建议、意见，请提交您宝贵的意见，或直接与我们的网站管理人员联系。</p>
+		<div class="device">
+			<input type="text" placeholder="问题标题. . . " name="option" />
+			<select name="fenlei" class="fenlei" placeholder="选择分类">
+				<option value="">选择分类</option>
+				<option value="1">关于质量</option>
+			</select>
+			<textarea name="question_detail" placeholder="问题背景、条件等详细信息..."></textarea><br>
+			<input class="btn btn-success" type="submit" value="提交" />
+		</div>
+		<br><br><br>
+		<div class="clear"></div>
+		
+		
+		<h2 id="source"><i class="icon"></i>资源免责声明</h2>
+		<div class="source">
+			<p class="con1">所有资源来自网友分享,本站只提供用户交互平台。</p><br>
+			<p class="con"> 一.本站收录的各类视频与资料，大部分是网友从网上搜集分享而来，其版权均归原作者及其网站所有，本站虽力求保存原有的版权信息，但因很多视频资料经过多次转摘，已无法确定其真实来源，或者已将原有信息丢失，所以敬请原作者原谅。如果您对本站所载视频作品版权的归属存有异议，请立即通知我，我将在第一时间予以删除，同时向你表示歉意!</p><br>
+			<p class="con"> 二.本站仅转载网上现成的视频资料，很难对这些视频的可用性，准确性或可靠性作出任何承诺与保证。不论何种情形，本站都不对任何由于使用或无法使用本站提供的视频资料所造成的直接的和间接的损失负任何责任。</p><br>
+			<p class="con"> 三.本站提供的所有视频，均为网友私人收藏性质，未经原版权作者许可,任何人不得擅作它用！请在下载24小时内删除！为尊重作者版权，请购买原版作品,支持你喜欢的作者，谢谢！</p>
+			<p class="email">联系邮箱：<strong>xjdiangou@163.com</strong></p>
+		</div>
+		
+		
+		<h2 id="join"><i class="icon"></i>加入我们</h2>
+		<div class="zhaopin">
+			<div class="col-sm-4">
+				<h2>软件工程师</h2>
+			</div>
+			<div class="col-sm-8">
+				 <div class="sj"></div>
+				<div class="mes">
+					<span>工作地点：</span>上海<br>
+					<span>工作职责：</span><br>
+					1、负责管理网站业务和研发团队,是一只日理万机的猿族首脑；<br>
+					2、协作各部门，为需求定制专业解决方案；<br>
+					3、最强猿族秘技，编写核心代码。<br>
+					<span>职位要求：</span><br>
+					1、五年以上工作经验，计算机软件或相关专业，专科以上学历;<br>
+					2、有大型分布式，高并发，高负载，高可用性系统设计开发经验优先； 最强的战绩，就是最好的证明；<br>
+					3、丰富行业经验的管理者，有视频和直播行业的优先；<br>
+				</div>
+			</div>
+		</div>
+
+		<div class="zhaopin">
+			<div class="col-sm-4">
+				<h2>软件工程师</h2>
+			</div>
+			<div class="col-sm-8">
+				 <div class="sj"></div>
+				<div class="mes">
+					<span>工作地点：</span>上海<br>
+					<span>工作职责：</span><br>
+					1、负责管理网站业务和研发团队,是一只日理万机的猿族首脑；<br>
+					2、协作各部门，为需求定制专业解决方案；<br>
+					3、最强猿族秘技，编写核心代码。<br>
+					<span>职位要求：</span><br>
+					1、五年以上工作经验，计算机软件或相关专业，专科以上学历;<br>
+					2、有大型分布式，高并发，高负载，高可用性系统设计开发经验优先； 最强的战绩，就是最好的证明；<br>
+					3、丰富行业经验的管理者，有视频和直播行业的优先；<br>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="zhaopin">
+			<div class="col-sm-4">
+				<h2>软件工程师</h2>
+			</div>
+			<div class="col-sm-8">
+				 <div class="sj"></div>
+				<div class="mes">
+					<span>工作地点：</span>上海<br>
+					<span>工作职责：</span><br>
+					1、负责管理网站业务和研发团队,是一只日理万机的猿族首脑；<br>
+					2、协作各部门，为需求定制专业解决方案；<br>
+					3、最强猿族秘技，编写核心代码。<br>
+					<span>职位要求：</span><br>
+					1、五年以上工作经验，计算机软件或相关专业，专科以上学历;<br>
+					2、有大型分布式，高并发，高负载，高可用性系统设计开发经验优先； 最强的战绩，就是最好的证明；<br>
+					3、丰富行业经验的管理者，有视频和直播行业的优先；<br>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="zhaopin">
+			<div class="col-sm-4">
+				<h2>软件工程师</h2>
+			</div>
+			<div class="col-sm-8">
+				 <div class="sj"></div>
+				<div class="mes">
+					<span>工作地点：</span>上海<br>
+					<span>工作职责：</span><br>
+					1、负责管理网站业务和研发团队,是一只日理万机的猿族首脑；<br>
+					2、协作各部门，为需求定制专业解决方案；<br>
+					3、最强猿族秘技，编写核心代码。<br>
+					<span>职位要求：</span><br>
+					1、五年以上工作经验，计算机软件或相关专业，专科以上学历;<br>
+					2、有大型分布式，高并发，高负载，高可用性系统设计开发经验优先； 最强的战绩，就是最好的证明；<br>
+					3、丰富行业经验的管理者，有视频和直播行业的优先；<br>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="zhaopin">
+			<div class="col-sm-4">
+				<h2>软件工程师</h2>
+			</div>
+			<div class="col-sm-8">
+				 <div class="sj"></div>
+				<div class="mes">
+					<span>工作地点：</span>上海<br>
+					<span>工作职责：</span><br>
+					1、负责管理网站业务和研发团队,是一只日理万机的猿族首脑；<br>
+					2、协作各部门，为需求定制专业解决方案；<br>
+					3、最强猿族秘技，编写核心代码。<br>
+					<span>职位要求：</span><br>
+					1、五年以上工作经验，计算机软件或相关专业，专科以上学历;<br>
+					2、有大型分布式，高并发，高负载，高可用性系统设计开发经验优先； 最强的战绩，就是最好的证明；<br>
+					3、丰富行业经验的管理者，有视频和直播行业的优先；<br>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="zhaopin">
+			<div class="col-sm-4">
+				<h2>软件工程师</h2>
+			</div>
+			<div class="col-sm-8">
+				 <div class="sj"></div>
+				<div class="mes">
+					<span>工作地点：</span>上海<br>
+					<span>工作职责：</span><br>
+					1、负责管理网站业务和研发团队,是一只日理万机的猿族首脑；<br>
+					2、协作各部门，为需求定制专业解决方案；<br>
+					3、最强猿族秘技，编写核心代码。<br>
+					<span>职位要求：</span><br>
+					1、五年以上工作经验，计算机软件或相关专业，专科以上学历;<br>
+					2、有大型分布式，高并发，高负载，高可用性系统设计开发经验优先； 最强的战绩，就是最好的证明；<br>
+					3、丰富行业经验的管理者，有视频和直播行业的优先；<br>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="zhaopin">
+			<div class="col-sm-4">
+				<h2>软件工程师</h2>
+			</div>
+			<div class="col-sm-8">
+				 <div class="sj"></div>
+				<div class="mes">
+					<span>工作地点：</span>上海<br>
+					<span>工作职责：</span><br>
+					1、负责管理网站业务和研发团队,是一只日理万机的猿族首脑；<br>
+					2、协作各部门，为需求定制专业解决方案；<br>
+					3、最强猿族秘技，编写核心代码。<br>
+					<span>职位要求：</span><br>
+					1、五年以上工作经验，计算机软件或相关专业，专科以上学历;<br>
+					2、有大型分布式，高并发，高负载，高可用性系统设计开发经验优先； 最强的战绩，就是最好的证明；<br>
+					3、丰富行业经验的管理者，有视频和直播行业的优先；<br>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+<div class="footer">
+	<hr><p>Copyright © 2015 - 乐迷圈—— 乐视网用户交流社区, All Rights Reserved<br>Powered By WeCenter 2.5.8 当前时区: GMT +8    RSS Feed</p>
+</div>
+<!--scroll_top start-->
+<div class="scroll_top">
+	<span class="s_cursor" title="回到顶部"></span>
+</div>
+<!--end scroll_top-->
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+		$(function(){
+			$(window).scroll(function(){
+				if($(window).scrollTop() >= 100){
+					$(".scroll_top").fadeIn(300);
+				} else{
+					$(".scroll_top").stop(true,true).fadeOut(300);
+				}
+			});
+			$(".scroll_top").click(function(){
+				$("html,body").animate({
+					scrollTop:0
+				},"slow");
+			});
+		});
+
+	</script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+		<title>左导</title>
+		<meta name="Keywords" content="关键词，关键词">
+		<meta name="description" content="">
+
+		<style>
+			*{margin:0;padding:0;}
+			body{font-size:14px;font-family:"微软雅黑";}
+			.content{width:960px;height:785px;margin:0 auto;border:1px solid red;}
+			.left_nav{width:145px;height:435px;background:#f0f2f6;border-radius:18px;border:1px solid #7d7d7d;margin-left:10px;}
+			.left_nav ul li{width:145px;height:45px;border-bottom:1px solid #ccc;list-style:none;text-align:center;}
+			.left_nav ul li a{text-decoration:none;text-align:center;line-height:50px;color: #595656;font-family:"微软雅黑";font-size:15px;}
+			.bg{width:190px;height:50px;display:block;background: url(aaa.png) -7px no-repeat;}
+		</style>
+	 </head>
+ <body>
+ <div class="content">
+	<div class="left_nav">
+		<ul>
+			<li><a href="">意见反馈</a></li>
+			<li><a href="">关于我们</a></li>
+			<li><a href="">加入我们</a></li>
+			<li><a href="">联系我们</a></li>
+			<li><a href="">资源免责声明</a></li>
+		</ul>
+	
+	</div>
+ </div>
+	<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".content .left_nav ul li a").hover(function(){
+				$(this).addClass("bg");
+			},function(){
+				$(this).removeClass("bg");
+			});
+		});
+	</script>
+ </body>
+</html>

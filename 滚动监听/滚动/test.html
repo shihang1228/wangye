@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+		<title>html模板</title>
+		<meta name="Keywords" content="关键词，关键词">
+		<meta name="description" content="">
+
+		<style>
+			*{margin:0;padding:0;}
+			body{font-size:14px;font-family:"微软雅黑"}
+			.abc{width:1200px;height:1200px;border:1px solid red;}
+			#test{width:300px;height:200px;background:#f63;margin:100px auto;}
+		</style>
+	 </head>
+ <body>
+	<div class="abc">
+		<div id="test">
+			
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(window).scroll(function(){
+				var ptop = document.getElementById("test").offsetTop;
+				alert(ptop);
+			
+			});
+			
+		})
+	
+	</script>
+ </body>
+</html>

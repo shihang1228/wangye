@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<style>
+ 
+.bofang{width:120px;height:120px;border:#000000 solid 0px; position:fixed;*position:relative;top:25px; left:-38px; display:none;}
+
+</style>
+</head>
+<script>
+
+function dl(){
+ var b=document.getElementById("bofang");
+ b.style.display="inline";
+b.innerHTML="<div style='width:300px; height:300px;;border:#000000 solid 0px;background:url(男-出现.gif) no-repeat;'></div>";
+var iID=setTimeout(cx,3500);
+function cx(){b.innerHTML="<div style='width:300px; height:300px;;border:#000000 solid 0px;background:url(眨眼.gif) no-repeat;'></div>";}
+ }
+
+
+</script>
+
+
+
+ <script>
+window.onscroll=function(){
+ var b=document.getElementById("bofang");
+b.innerHTML="<div style='width:300px; height:300px; position:relative;border:#000000 solid 0px;background:url(男-站不稳.gif) no-repeat;'></div>";
+
+ var iID=setTimeout(clock,2000);
+function clock(){
+b.innerHTML="<div style='width:120px;height:120px;border:#000000 solid 0px; position:relative;top:0px;background:url(眨眼.gif) no-repeat;'></div>"}
+
+
+}
+</script>
+
+
+
+
+
+<script>
+   function bq(){
+       
+	   var s=document.getElementById("wbk").value;
+       var b=document.getElementById("bofang");
+	
+	
+	if(s.indexOf("哭")>-1){
+b.innerHTML="<div style='width:120px;height:120px;border:#000000 solid 0px; position:relative;top:0px; left:25px;background:url(男-哭.gif) no-repeat;'></div>"
+ var iID=setTimeout(clock,1800);
+function clock(){
+b.innerHTML="<div style='width:120px;height:120px;border:#000000 solid 0px; position:relative;top:0px;background:url(眨眼.gif) no-repeat;'></div>"}
+}
+
+
+
+
+
+if(s.indexOf("笑")>-1){
+b.innerHTML="<div style='width:120px;height:120px;border:#000000 solid 0px; position:relative;top:0px; left:25px;background:url(男-笑.gif) no-repeat;'></div>"
+ var iID=setTimeout(clock,1800);
+function clock(){
+b.innerHTML="<div style='width:120px;height:120px;border:#000000 solid 0px; position:relative;top:0px;background:url(眨眼.gif) no-repeat;'></div>"}
+}
+
+
+
+
+if(s.indexOf("色")>-1){
+b.innerHTML="<div style='width:120px;height:120px;border:#000000 solid 0px; position:relative;top:0px; left:25px;background:url(男-色q.gif) no-repeat;'></div>"
+ var iID=setTimeout(clock,1800);
+function clock(){
+b.innerHTML="<div style='width:120px;height:120px;border:#000000 solid 0px; position:relative;top:0px;background:url(眨眼.gif) no-repeat;'></div>"}
+}
+
+
+
+
+
+if(s.indexOf("挥手")>-1){
+b.innerHTML="<div style='width:120px;height:120px;border:#000000 solid 0px; position:relative;top:0px; left:25px;background:url(男-挥手.gif) no-repeat;'></div>"
+ var iID=setTimeout(clock,1800);
+function clock(){
+b.innerHTML="<div style='width:120px;height:120px;border:#000000 solid 0px; position:relative;top:0px;background:url(眨眼.gif) no-repeat;'></div>"}
+}
+
+}
+
+</script>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script>
+
+document.ondblclick=function bt(ev){
+
+var oEvent=ev||event;
+var oLeft=oEvent.clientX+'px';
+var oTop=oEvent.clientY+'px';
+ var oLeft1 = oEvent.clientX;
+var left=document.getElementById("bofang").style.left;
+var left1=parseInt(left);
+  var b=document.getElementById("bofang");
+  
+     if(isNaN(left1) ){left1=0;}
+   if(oLeft1>left1){b.innerHTML="<div style='width:300px; height:300px;;border:#000000 solid 0px;background:url(往左走一直走.gif) no-repeat;'></div>";}
+   if(oLeft1<left1){b.innerHTML="<div style='width:200px;; height:200px;;border:#000000 solid 0px;background:url(往右走一直走.gif) no-repeat;'></div>";}
+   if(oLeft1==left1){b.innerHTML="<div style='width:200px; height:200px;;border:#000000 solid 0px;background:url(男-往左走.gif) no-repeat;'></div>";}
+   
+
+var yd=setTimeout(dong,000);
+  function dong(){$("#bofang").animate({left:oLeft,top:oTop},9000); }
+  var bian=setTimeout(bian,9500);
+ 
+ 
+      
+ 			  	 
+ 	
+function bian(){ 
+ var b=document.getElementById("bofang");
+b.innerHTML="<div style='width:120px; height:110px;;border:#000000 solid 0px;background:url(眨眼.gif) no-repeat;'></div>";}
+  		  
+  }
+
+</script>
+ <body>
+
+<input   type="text"  id="wbk"/>
+<input  type="button"  value="登录" onclick="dl()"/>
+<input  type="button"  value="点击" onclick="bq()"/>
+<input  type="button"  value="退下" onclick="tc()"/>
+
+<div class="bofang"  id="bofang"><img src="眨眼.gif" /></div>
+<script>
+function tc(){
+var b=document.getElementById("bofang");
+b.innerHTML="<div style='width:300px; height:300px;;border:#000000 solid 0px;background:url(男-消失.gif) no-repeat;'></div>";
+ var bian=setTimeout(xs,1500);
+function xs(){b.style.display="none";}
+}
+
+</script>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</body>
+</html>

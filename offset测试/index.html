@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+		<title>下拉滚动条滚到底部了吗？</title>
+		<meta name="Keywords" content="关键词，关键词">
+		<meta name="description" content="">
+
+		<style>
+			*{margin:0;padding:0;}
+			body{font-size:14px;font-family:"微软雅黑"}
+			.abc{width:1200px;height:2000px;border:1px solid red;}
+			.abc .test{width:300px;height:200px;background:#f63;margin:100px auto;}
+		</style>
+	 </head>
+ <body>
+	<div id="div1" style="overflow-y:auto; overflow-x:hidden; height:500px;">
+      <div style="background-color:#ccc; height:750px;">IE 和 FF 下测试通过</div>
+    </div>
+
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+
+      $(function (){
+        var nScrollHight = 0; //滚动距离总长(注意不是滚动条的长度)
+        var nScrollTop = 0;   //滚动到的当前位置
+        var nDivHight = $("#div1").height();
+
+        $("#div1").scroll(function(){
+			
+          nScrollHight = $(this)[0].scrollHeight;
+          nScrollTop = $(this)[0].scrollTop;
+
+		  alert("nScrollHeight:滚动距离总长：" + nScrollHight + ", 滚动的当前位置：" + nScrollTop);
+
+          if(nScrollTop + nDivHight >= nScrollHight)
+            alert("滚动条到底部了");
+          });
+      });
+     
+	</script>
+ </body>
+</html>

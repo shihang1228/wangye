@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+#scroll { width:925px; height:130px; overflow:hidden; margin-left: 18px; margin-bottom: 10px; }
+#scroll ul { list-style:none; margin: 0px; padding: 0px; }
+#scroll ul li { width:185px; float:left; height:65px; text-align:center; }
+#scroll ul li a { border: 1px solid #ccc; display: block; height: 60px; width: 180px; }
+#scroll ul li a img { width:180px; height:60px; border:none; padding:0px; border:0; }
+.cooperatingagency { margin: auto; height: auto; width: 958px; background-image: url(images/cooperatingagencyBG.jpg); background-repeat: no-repeat; background-position: 0px 0px; }
+.cooperatingagency h2 { font-size: 14px; font-style: normal; line-height: 28px; font-weight: normal; color: #666; display: block; height: 28px; padding-top: 2px; padding-right: 0px; padding-bottom: 0px; padding-left: 30px; margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px; letter-spacing: 0.2em; }
+.SubSystem { margin: auto; width: 958px; height: 250px; }
+</style>
+<script type="text/javascript">
+function Marquee(){
+  this.ID=document.getElementById(arguments[0]);
+  this.Direction=arguments[1];
+  this.Step=arguments[2];
+  this.Width=arguments[3];
+  this.Height=arguments[4];
+  this.Timer=arguments[5];
+  this.WaitTime=arguments[6];
+  this.StopTime=arguments[7];
+  if(arguments[8]){this.ScrollStep=arguments[8];}else{this.ScrollStep=this.Direction>1?this.Width:this.Height;}
+  this.CTL=this.StartID=this.Stop=this.MouseOver=0;
+  this.ID.style.overflowX=this.ID.style.overflowY="hidden";
+  this.ID.noWrap=true;
+  this.ID.style.width=this.Width;
+  this.ID.style.height=this.Height;
+  this.ClientScroll=this.Direction>1?this.ID.scrollWidth:this.ID.scrollHeight;
+  this.ID.innerHTML+=this.ID.innerHTML;
+  this.Start(this,this.Timer,this.WaitTime,this.StopTime);
+  }
+Marquee.prototype.Start=function(msobj,timer,waittime,stoptime){
+  msobj.StartID=function(){msobj.Scroll();}
+  msobj.Continue=function(){
+    if(msobj.MouseOver==1){setTimeout(msobj.Continue,waittime);}
+    else{clearInterval(msobj.TimerID); msobj.CTL=msobj.Stop=0; msobj.TimerID=setInterval(msobj.StartID,timer);}
+    }
+  msobj.Pause=function(){msobj.Stop=1; clearInterval(msobj.TimerID); setTimeout(msobj.Continue,waittime);}
+  msobj.Begin=function(){
+    msobj.TimerID=setInterval(msobj.StartID,timer);
+    msobj.ID.onmouseover=function(){msobj.MouseOver=1; clearInterval(msobj.TimerID);}
+    msobj.ID.onmouseout=function(){msobj.MouseOver=0; if(msobj.Stop==0){clearInterval(msobj.TimerID); msobj.TimerID=setInterval(msobj.StartID,timer);}}
+    }
+  setTimeout(msobj.Begin,stoptime);
+  }
+Marquee.prototype.Scroll=function(){
+  switch(this.Direction){
+    case 0:
+      this.CTL+=this.Step;
+      if(this.CTL>=this.ScrollStep&&this.WaitTime>0){this.ID.scrollTop+=this.ScrollStep+this.Step-this.CTL; this.Pause(); return;}
+      else{if(this.ID.scrollTop>=this.ClientScroll) this.ID.scrollTop-=this.ClientScroll; this.ID.scrollTop+=this.Step;}
+      break;
+    case 1:
+      this.CTL+=this.Step;
+      if(this.CTL>=this.ScrollStep&&this.WaitTime>0){this.ID.scrollTop-=this.ScrollStep+this.Step-this.CTL; this.Pause(); return;}
+      else{if(this.ID.scrollTop<=0) this.ID.scrollTop+=this.ClientScroll; this.ID.scrollTop-=this.Step;}
+      break;
+    case 2:
+      this.CTL+=this.Step;
+      if(this.CTL>=this.ScrollStep&&this.WaitTime>0){this.ID.scrollLeft+=this.ScrollStep+this.Step-this.CTL; this.Pause(); return;}
+      else{if(this.ID.scrollLeft>=this.ClientScroll) this.ID.scrollLeft-=this.ClientScroll; this.ID.scrollLeft+=this.Step;}
+      break;
+    case 3:
+      this.CTL+=this.Step;
+      if(this.CTL>=this.ScrollStep&&this.WaitTime>0){this.ID.scrollLeft-=this.ScrollStep+this.Step-this.CTL; this.Pause(); return;}
+      else{if(this.ID.scrollLeft<=0) this.ID.scrollLeft+=this.ClientScroll; this.ID.scrollLeft-=this.Step;}
+      break;
+    }
+  }
+</script>
+</head>
+
+<body>
+
+<!--手风琴开始-->
+<div class="SubSystem"> </div>
+<!--手风琴结束-->
+
+<!--合作机构开始-->
+<div class="cooperatingagency">
+  <h2>合作机构</h2>
+  <div id="scroll">
+    <ul>
+      <li><a href="#"><img src="images/cooperatingagency1.jpg" width="180" height="60" /></a></li>
+      <li><a href="#"><img src="images/cooperatingagency2.jpg" width="180" height="60" /></a></li>
+      <li><a href="#"><img src="images/cooperatingagency3.jpg" width="180" height="60" /></a></li>
+      <li><a href="#"><img src="images/cooperatingagency4.jpg" width="180" height="60" /></a></li>
+      <li><a href="#"><img src="images/cooperatingagency5.jpg" width="180" height="60" /></a></li>
+      <li><a href="#"><img src="images/cooperatingagency6.jpg" width="180" height="60" /></a></li>
+      <li><a href="#"><img src="images/cooperatingagency7.jpg" width="180" height="60" /></a></li>
+      <li><a href="#"><img src="images/cooperatingagency8.jpg" width="180" height="60" /></a></li>
+      <li><a href="#"><img src="images/cooperatingagency9.jpg" width="180" height="60" /></a></li>
+      <li><a href="#"><img src="images/cooperatingagency10.jpg" width="180" height="60" /></a></li>
+      <li><a href="#"><img src="images/cooperatingagency11.jpg" width="180" height="60" /></a></li>
+      <li><a href="#"><img src="images/cooperatingagency12.jpg" width="180" height="60" /></a></li>
+      <li><a href="#"><img src="images/cooperatingagency13.jpg" width="180" height="60" /></a></li>
+      <li><a href="#"><img src="images/cooperatingagency14.jpg" width="180" height="60" /></a></li>
+      <li><a href="#"><img src="images/cooperatingagency15.jpg" width="180" height="60" /></a></li>
+    </ul>
+  </div>
+</div>
+<!--合作机构结束-->
+<script>
+window.onload=function(){
+  new Marquee(
+    "scroll",  //容器ID<br />
+    0,  //向上滚动(0向上 1向下 2向左 3向右)<br />
+    2,  //滚动的步长<br />
+    925,  //容器可视宽度<br />
+    130,  //容器可视高度<br />
+    20,  //定时器 数值越小，滚动的速度越快(1000=1秒,建议不小于20)<br />
+    5000,  //间歇停顿时间(0为不停顿,1000=1秒)<br />
+    2000,  //开始时的等待时间(0为不等待,1000=1秒)<br />
+    65//间歇滚动间距(可选)<br />
+    );
+  };
+</script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+		<title>加入我们时间轴</title>
+		<meta name="Keywords" content="">
+		<meta name="description" content="">
+		
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{font-size:12px;font-family:"微软雅黑";color:#666;}
+			
+			/*timeline strat*/
+			.timeline{width:1100px;height:600px;margin:0 auto;position:relative;}
+			.timeline .line{width:5px;height:1000px;background:#ccc;position:absolute;left:200px;top:30px;opacity:0.3;}
+			.timeline .l_all{width:1100px;height:600px;position:absolute;}
+			.timeline .l_all .list{width:800px;margin: 50px 0 0 168px;}
+			.timeline .l_all .list .icon{width:66px;height:66px;float:left;}
+			.timeline .l_all .list .icon img{width:66px;height:66px;border-radius:33px;}
+			.timeline .l_all .list .sj{width:13px;height:16px;background:url("images/left.png") no-repeat; float:left; margin:23px 0 0 10px;}
+			.timeline .l_all .list .mes{width:450px;background:#FFF;float:left;border-radius:8px;
+				color:#888;font-size:14px;padding:10px 20px;}
+			/*end timeline*/
+
+			.clear{clear:both;}
+		</style>
+	<link type="text/css" rel="stylesheet" href="css/animate.css"></link>
+	</head>
+<body>
+
+	<div class="timeline">
+		<div class="line"></div>
+		<div class="l_all">
+
+			<!--list start-->
+			<div class="list animated rollIn">
+				<div class="icon">
+					<img src="images/arry.jpg" alt="ArryÀÏÊ¦" width="66" height="66"/>
+				</div>
+				<div class="sj"></div>
+				<div class="mes">
+					   香蕉点购成立之初，非常重视人才发展，始终坚持“以人为本”的发展理念，从员工个性化的资源特色出发最大程度上合理、优化配置人力资源，并不断运用多元化的激励方式和培训，充分挖掘和合理运用每位员工的最大的潜能，不断地创造是优秀人才能够充分施展才能的环境，给员工提供良好的待遇和广阔的个人发展空间。通过聘请互联网知名人士挂帅电子商务平台运营中心，不断引进一流的培训管理机制，经营管理人才，形成了一支具有高素质的设计、经营、技术队伍。
+				</div>
+				<div class="clear"></div>
+			</div>
+			<!--end list-->
+
+			<!--list start-->
+			<div class="list animated rollIn">
+				<div class="icon">
+					<img src="images/facebook.jpg" alt="facebook" width="66" height="66"/>
+				</div>
+				<div class="sj"></div>
+				<div class="mes">
+					   香蕉点购成立之初，非常重视人才发展，始终坚持“以人为本”的发展理念，从员工个性化的资源特色出发最大程度上合理、优化配置人力资源，并不断运用多元化的激励方式和培训，充分挖掘和合理运用每位员工的最大的潜能，不断地创造是优秀人才能够充分施展才能的环境，给员工提供良好的待遇和广阔的个人发展空间。通过聘请互联网知名人士挂帅电子商务平台运营中心，不断引进一流的培训管理机制，经营管理人才，形成了一支具有高素质的设计、经营、技术队伍。
+				</div>
+				<div class="clear"></div>
+			</div>
+			<!--end list-->
+			<!--list start-->
+			<div class="list animated rollIn">
+				<div class="icon">
+					<img src="images/mv.jpg" alt="ArryÀÏÊ¦" width="66" height="66"/>
+				</div>
+				<div class="sj"></div>
+				<div class="mes">
+					   香蕉点购成立之初，非常重视人才发展，始终坚持“以人为本”的发展理念，从员工个性化的资源特色出发最大程度上合理、优化配置人力资源，并不断运用多元化的激励方式和培训，充分挖掘和合理运用每位员工的最大的潜能，不断地创造是优秀人才能够充分施展才能的环境，给员工提供良好的待遇和广阔的个人发展空间。通过聘请互联网知名人士挂帅电子商务平台运营中心，不断引进一流的培训管理机制，经营管理人才，形成了一支具有高素质的设计、经营、技术队伍。
+				</div>
+				<div class="clear"></div>
+			</div>
+			<!--end list-->
+			
+		</div>
+	</div>
+
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+	
+	var scrollHeight = 0; //
+	var scrollTop = 0; // 
+	var html = "";
+	$(function(){
+		var _height = $(window).height(); //
+		$(window).scroll(function(){
+			scrollHeight = document.body.scrollHeight; //
+			scrollTop = document.body.scrollTop; // 
+			if(scrollTop+_height >= scrollHeight){
+				html = $(".l_all").html();
+				$(".l_all").append(html);
+				$(".line").height(document.body.scrollHeight);
+			}
+		});
+	});
+
+</script>
+</body>
+</html>
