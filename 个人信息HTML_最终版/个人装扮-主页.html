@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>个人装扮-主页</title>
+<link rel="stylesheet" type="text/css" href="css/public.css"/>
+<link rel="stylesheet" type="text/css" href="css/perInfor.css"/>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/tab.js"></script>
+<script type="text/javascript" src="js/hideshow.js"></script>
+</head>
+
+<body>
+<div class="wrap1200">
+	<div class="sideber">
+    	<div  class="sideberTx">
+            <h3><img src="images/tx-ico.jpg"//></h3>
+            <p>阳光生活</p>
+		</div>
+        <div class="sideberList">
+        	<h4><b class="si1">1</b><a>我的资料</a></h4>
+            <h4><b class="si2">2</b><a>我的信息</a></h4>
+            <h4><b class="si3">3</b><a>电子相册</a></h4>
+            <h4><b class="si4">4</b><a>好友信息</a></h4>
+            <h4><b class="si5">5</b><a>装扮宠物</a></h4>
+            <h4><b class="si6">6</b><a>我的足迹</a></h4>	
+        </div>
+        <div class="logo"><a href=""><img src="images/logo.png" width="100" height="26"/></a></div>
+    </div>
+    <div class="right-con">
+    	<div class="home">
+        	<div class="homeTop"><img src="images/home.png"/></div>
+            <div class="homeBot">
+            	<ul>
+                	<li><a href=""><img src="images/home3.png"/></a></li>
+                    <li><a href=""><img src="images/home2.png"/></a></li>
+                    <li><a href="" class="hover"><img src="images/home1.png"/></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</div>
+ <script type="text/javascript">
+        <!--
+        picrun_ini()
+        //-->
+        </script> 
+<script>
+//自动获取浏览器宽高
+      var h=($(window).height());
+      $('.sideber').css({width:150,height:h});	
+
+// 鼠标缩放值进行变化
+function setwidth(){
+	  var h=($(window).height());
+      $('.sideber').css({width:150,height:h});
+};
+window.onresize=function(){setwidth()};
+</script>
+
+
+</body>
+</html>

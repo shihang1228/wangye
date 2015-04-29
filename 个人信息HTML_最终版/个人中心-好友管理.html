@@ -1,0 +1,614 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>个人中心-好友主页面</title>
+<link rel="stylesheet" type="text/css" href="css/public.css"/>
+<link rel="stylesheet" type="text/css" href="css/friendMes.css"/>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/tab.js"></script>
+<script type="text/javascript" src="js/hideshow.js"></script>
+</head>
+
+<body>
+<div class="wrap1200">
+	<div class="sideber">
+    	<div  class="sideberTx">
+            <h3><img src="images/tx-ico.jpg"//></h3>
+            <p>阳光生活</p>
+		</div>
+        <div class="sideberList">
+        	<h4><b class="si1">1</b><a>我的资料</a></h4>
+            <h4><b class="si2">2</b><a>我的信息</a></h4>
+            <h4><b class="si3">3</b><a>电子相册</a></h4>
+            <h4><b class="si4">4</b><a>好友信息</a></h4>
+            <h4><b class="si5">5</b><a>装扮宠物</a></h4>
+            <h4><b class="si6">6</b><a>我的足迹</a></h4>	
+        </div>
+        <div class="logo"><a href=""><img src="images/logo.png" width="100" height="26"/></a></div>
+    </div>
+
+    <div class="right-con">
+		<!--右侧上方图片-->
+    	<div class="friendBox">
+        	<div class="friAd"><img src="images/pic982.png"/></div>
+        </div>
+
+		<div class="clear"></div>
+
+		<!--右侧下方好友列表-->
+		<div class="friendList">
+			<!--好友分组-->
+			<div class="f_group">
+				<h3 class="f_title">好友分组</h3>
+				<div class="group_list">
+					<dl>
+						<dt>全部<span>88</span></dt>
+						<dd>组1<span>20</span></dd>
+						<dd>组2<span>40</span></dd>
+						<dd>组3<span>28</span></dd>
+
+						<dt class="group_add">
+							<a href="#"><img src="images/jia.png" alt="" />添加分组</a>
+						</dt>
+						
+						<dt class="group_yue">约吗<span>25</span></dt>
+						<dt>已删<span>8</span></dt>
+					</dl>
+
+				</div>
+			</div>
+			<!--全部好友-->
+			<div class="f_con">
+				<div class="f_top">
+					<h3 class="f_title">全部好友（88）</h3>
+					<form action="#">
+						<input type="text" class="f_search" name="f_search" />		
+						<input type="submit" value="搜索" class="f_sub" />
+					</form>
+					<a href="#" class="f_add">添加好友</a>
+				</div>
+				<div class="clear"></div>
+				<div class="fri_list">
+					<table class="fri_table">
+						<tr>
+							<th width="30" align="center"><input type="checkbox" onclick="selectAll(this);" /></th>
+							<th width="40">头像</th>
+							<th width="80">名字</th>
+							<th width="80">备注</th>
+							<th width="67">分组</th>
+							<th>最后登录</th>
+							<th colspan="3" width="60">操作</th>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td><img src="images/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td><input type="text" value="备注备注"/></td>
+							<td>
+								<select name="groups">
+									<option value="分组分组">分组分组</option>
+									<option value="我的好友">我的好友</option>
+									<option value="香蕉电子">香蕉电子</option>
+									<option value="小伙伴儿">小伙伴儿</option>
+									<option value="打印">打印</option>
+								</select>
+							</td>
+							<td>7天内</td>
+							<td><a href="#"><img src="images/look.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/edit.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/delete.png" alt="" /></a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"  /></td>
+							<td><img src="images/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td><input type="text" value="备注备注"/></td>
+							<td>
+								<select name="groups">
+									<option value="分组分组">分组分组</option>
+									<option value="我的好友">我的好友</option>
+									<option value="香蕉电子">香蕉电子</option>
+									<option value="小伙伴儿">小伙伴儿</option>
+									<option value="打印">打印</option>
+								</select>
+							</td>
+							<td>7天内</td>
+							<td><a href="#"><img src="images/look.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/edit.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/delete.png" alt="" /></a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"  /></td>
+							<td><img src="images/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td><input type="text" value="备注备注"/></td>
+							<td>
+								<select name="groups">
+									<option value="分组分组">分组分组</option>
+									<option value="我的好友">我的好友</option>
+									<option value="香蕉电子">香蕉电子</option>
+									<option value="小伙伴儿">小伙伴儿</option>
+									<option value="打印">打印</option>
+								</select>
+							</td>
+							<td>7天内</td>
+							<td><a href="#"><img src="images/look.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/edit.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/delete.png" alt="" /></a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"  /></td>
+							<td><img src="images/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td><input type="text" value="备注备注"/></td>
+							<td>
+								<select name="groups">
+									<option value="分组分组">分组分组</option>
+									<option value="我的好友">我的好友</option>
+									<option value="香蕉电子">香蕉电子</option>
+									<option value="小伙伴儿">小伙伴儿</option>
+									<option value="打印">打印</option>
+								</select>
+							</td>
+							<td>7天内</td>
+							<td><a href="#"><img src="images/look.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/edit.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/delete.png" alt="" /></a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"  /></td>
+							<td><img src="images/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td><input type="text" value="备注备注"/></td>
+							<td>
+								<select name="groups">
+									<option value="分组分组">分组分组</option>
+									<option value="我的好友">我的好友</option>
+									<option value="香蕉电子">香蕉电子</option>
+									<option value="小伙伴儿">小伙伴儿</option>
+									<option value="打印">打印</option>
+								</select>
+							</td>
+							<td>7天内</td>
+							<td><a href="#"><img src="images/look.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/edit.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/delete.png" alt="" /></a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"  /></td>
+							<td><img src="images/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td><input type="text" value="备注备注"/></td>
+							<td>
+								<select name="groups">
+									<option value="分组分组">分组分组</option>
+									<option value="我的好友">我的好友</option>
+									<option value="香蕉电子">香蕉电子</option>
+									<option value="小伙伴儿">小伙伴儿</option>
+									<option value="打印">打印</option>
+								</select>
+							</td>
+							<td>7天内</td>
+							<td><a href="#"><img src="images/look.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/edit.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/delete.png" alt="" /></a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"  /></td>
+							<td><img src="images/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td><input type="text" value="备注备注"/></td>
+							<td>
+								<select name="groups">
+									<option value="分组分组">分组分组</option>
+									<option value="我的好友">我的好友</option>
+									<option value="香蕉电子">香蕉电子</option>
+									<option value="小伙伴儿">小伙伴儿</option>
+									<option value="打印">打印</option>
+								</select>
+							</td>
+							<td>7天内</td>
+							<td><a href="#"><img src="images/look.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/edit.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/delete.png" alt="" /></a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"  /></td>
+							<td><img src="images/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td><input type="text" value="备注备注"/></td>
+							<td>
+								<select name="groups">
+									<option value="分组分组">分组分组</option>
+									<option value="我的好友">我的好友</option>
+									<option value="香蕉电子">香蕉电子</option>
+									<option value="小伙伴儿">小伙伴儿</option>
+									<option value="打印">打印</option>
+								</select>
+							</td>
+							<td>7天内</td>
+							<td><a href="#"><img src="images/look.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/edit.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/delete.png" alt="" /></a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"  /></td>
+							<td><img src="images/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td><input type="text" value="备注备注"/></td>
+							<td>
+								<select name="groups">
+									<option value="分组分组">分组分组</option>
+									<option value="我的好友">我的好友</option>
+									<option value="香蕉电子">香蕉电子</option>
+									<option value="小伙伴儿">小伙伴儿</option>
+									<option value="打印">打印</option>
+								</select>
+							</td>
+							<td>7天内</td>
+							<td><a href="#"><img src="images/look.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/edit.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/delete.png" alt="" /></a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"  /></td>
+							<td><img src="images/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td><input type="text" value="备注备注"/></td>
+							<td>
+								<select name="groups">
+									<option value="分组分组">分组分组</option>
+									<option value="我的好友">我的好友</option>
+									<option value="香蕉电子">香蕉电子</option>
+									<option value="小伙伴儿">小伙伴儿</option>
+									<option value="打印">打印</option>
+								</select>
+							</td>
+							<td>7天内</td>
+							<td><a href="#"><img src="images/look.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/edit.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/delete.png" alt="" /></a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"  /></td>
+							<td><img src="images/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td><input type="text" value="备注备注"/></td>
+							<td>
+								<select name="groups">
+									<option value="分组分组">分组分组</option>
+									<option value="我的好友">我的好友</option>
+									<option value="香蕉电子">香蕉电子</option>
+									<option value="小伙伴儿">小伙伴儿</option>
+									<option value="打印">打印</option>
+								</select>
+							</td>
+							<td>7天内</td>
+							<td><a href="#"><img src="images/look.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/edit.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/delete.png" alt="" /></a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"  /></td>
+							<td><img src="images/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td><input type="text" value="备注备注"/></td>
+							<td>
+								<select name="groups">
+									<option value="分组分组">分组分组</option>
+									<option value="我的好友">我的好友</option>
+									<option value="香蕉电子">香蕉电子</option>
+									<option value="小伙伴儿">小伙伴儿</option>
+									<option value="打印">打印</option>
+								</select>
+							</td>
+							<td>7天内</td>
+							<td><a href="#"><img src="images/look.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/edit.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/delete.png" alt="" /></a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"  /></td>
+							<td><img src="images/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td><input type="text" value="备注备注"/></td>
+							<td>
+								<select name="groups">
+									<option value="分组分组">分组分组</option>
+									<option value="我的好友">我的好友</option>
+									<option value="香蕉电子">香蕉电子</option>
+									<option value="小伙伴儿">小伙伴儿</option>
+									<option value="打印">打印</option>
+								</select>
+							</td>
+							<td>7天内</td>
+							<td><a href="#"><img src="images/look.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/edit.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/delete.png" alt="" /></a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"  /></td>
+							<td><img src="images/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td><input type="text" value="备注备注"/></td>
+							<td>
+								<select name="groups">
+									<option value="分组分组">分组分组</option>
+									<option value="我的好友">我的好友</option>
+									<option value="香蕉电子">香蕉电子</option>
+									<option value="小伙伴儿">小伙伴儿</option>
+									<option value="打印">打印</option>
+								</select>
+							</td>
+							<td>7天内</td>
+							<td><a href="#"><img src="images/look.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/edit.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/delete.png" alt="" /></a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"  /></td>
+							<td><img src="images/tou.png" alt="" /></td>
+							<td>用户名名</td>
+							<td><input type="text" value="备注备注"/></td>
+							<td>
+								<select name="groups">
+									<option value="分组分组">分组分组</option>
+									<option value="我的好友">我的好友</option>
+									<option value="香蕉电子">香蕉电子</option>
+									<option value="小伙伴儿">小伙伴儿</option>
+									<option value="打印">打印</option>
+								</select>
+							</td>
+							<td>7天内</td>
+							<td><a href="#"><img src="images/look.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/edit.png" alt="" /></a></td>
+							<td><a href="#"><img src="images/delete.png" alt="" /></a></td>
+						</tr>
+						<tr>
+							<td colspan="3">
+								<a href="" class="shanchu">删除</a>
+								<select name="groups">
+									<option value="移动分组">移动分组</option>
+								</select>
+							</td>
+							<td colspan="2"></td>
+							<td colspan="4">
+								<a href="#">&lt;</a>
+								<a href="#">1</a>
+								<a href="#">2</a>
+								<a href="#">3</a>
+								<a href="#">...</a>
+								<a href="#">20</a>
+								<a href="#">&gt;</a>
+							</td>
+						</tr>
+					</table>	
+				</div>
+
+
+			</div>
+			<div class="f_mab">
+				<div class="m_top">
+					<h3 class="f_title">可能认识</h3>
+					<a href="#">换一批</a>
+				</div>
+				<div class="m_con">
+					<ul>
+						<li>
+							<i class="icon m_icon1"><img src="images/friend.png" alt="" /></i>
+							<a href="">
+								<img src="images/ico80.png" alt="" width="55" height="55" />
+								<p class="m_tip">小妮子...</p>
+							</a>
+						</li>
+						<li>
+							<i class="icon m_icon2"><img src="images/friend.png" alt="" /></i>
+							<a href="">
+								<img src="images/ico80.png" alt="" width="55" height="55" />
+								<p class="m_tip">小妮子...</p>
+							</a>
+						</li>
+						<li>
+							<i class="icon m_icon3"><img src="images/friend.png" alt="" /></i>
+							<a href="">
+								<img src="images/ico80.png" alt="" width="55" height="55" />
+								<p class="m_tip">小妮子...</p>
+							</a>
+						</li>
+						<li>
+							<i class="icon m_icon4"><img src="images/friend.png" alt="" /></i>
+							<a href="">
+								<img src="images/ico80.png" alt="" width="55" height="55" />
+								<p class="m_tip">小妮子...</p>
+							</a>
+						</li>
+
+						<li>
+							<i class="icon m_icon5"><img src="images/friend.png" alt="" /></i>
+							<a href="">
+								<img src="images/ico80.png" alt="" width="55" height="55" />
+								<p class="m_tip">小妮子...</p>
+							</a>
+						</li>
+						<li>
+							<i class="icon m_icon6"><img src="images/friend.png" alt="" /></i>
+							<a href="">
+								<img src="images/ico80.png" alt="" width="55" height="55" />
+								<p class="m_tip">小妮子...</p>
+							</a>
+						</li>
+						<li>
+							<i class="icon m_icon7"><img src="images/friend.png" alt="" /></i>
+							<a href="">
+								<img src="images/ico80.png" alt="" width="55" height="55" />
+								<p class="m_tip">小妮子...</p>
+							</a>
+						</li>
+						<li>
+							<i class="icon m_icon8"><img src="images/friend.png" alt="" /></i>
+							<a href="">
+								<img src="images/ico80.png" alt="" width="55" height="55" />
+								<p class="m_tip">小妮子...</p>
+							</a>
+						</li>
+
+						<li>
+							<i class="icon m_icon9"><img src="images/friend.png" alt="" /></i>
+							<a href="">
+								<img src="images/ico80.png" alt="" width="55" height="55" />
+								<p class="m_tip">小妮子...</p>
+							</a>
+						</li>
+						<li>
+							<i class="icon m_icon10"><img src="images/friend.png" alt="" /></i>
+							<a href="">
+								<img src="images/ico80.png" alt="" width="55" height="55" />
+								<p class="m_tip">小妮子...</p>
+							</a>
+						</li>
+						<li>
+							<i class="icon m_icon11"><img src="images/friend.png" alt="" /></i>
+							<a href="">
+								<img src="images/ico80.png" alt="" width="55" height="55" />
+								<p class="m_tip">小妮子...</p>
+							</a>
+						</li>
+						<li>
+							<i class="icon m_icon12"><img src="images/friend.png" alt="" /></i>
+							<a href="">
+								<img src="images/ico80.png" alt="" width="55" height="55" />
+								<p class="m_tip">小妮子...</p>
+							</a>
+						</li>
+
+						<li>
+							<i class="icon m_icon13"><img src="images/friend.png" alt="" /></i>
+							<a href="">
+								<img src="images/ico80.png" alt="" width="55" height="55" />
+								<p class="m_tip">小妮子...</p>
+							</a>
+						</li>
+						<li>
+							<i class="icon m_icon14"><img src="images/friend.png" alt="" /></i>
+							<a href="">
+								<img src="images/ico80.png" alt="" width="55" height="55" />
+								<p class="m_tip">小妮子...</p>
+							</a>
+						</li>
+						<li>
+							<i class="icon m_icon15"><img src="images/friend.png" alt="" /></i>
+							<a href="">
+								<img src="images/ico80.png" alt="" width="55" height="55" />
+								<p class="m_tip">小妮子...</p>
+							</a>
+						</li>
+						<li>
+							<i class="icon m_icon16"><img src="images/friend.png" alt="" /></i>
+							<a href="">
+								<img src="images/ico80.png" alt="" width="55" height="55" />
+								<p class="m_tip">小妮子...</p>
+							</a>
+						</li>
+
+						<li>
+							<i class="icon m_icon17"><img src="images/friend.png" alt="" /></i>
+							<a href="">
+								<img src="images/ico80.png" alt="" width="55" height="55" />
+								<p class="m_tip">小妮子...</p>
+							</a>
+						</li>
+						<li>
+							<i class="icon m_icon18"><img src="images/friend.png" alt="" /></i>
+							<a href="">
+								<img src="images/ico80.png" alt="" width="55" height="55" />
+								<p class="m_tip">小妮子...</p>
+							</a>
+						</li>
+						<li>
+							<i class="icon m_icon19"><img src="images/friend.png" alt="" /></i>
+							<a href="">
+								<img src="images/ico80.png" alt="" width="55" height="55" />
+								<p class="m_tip">小妮子...</p>
+							</a>
+						</li>
+						<li>
+							<i class="icon m_icon20"><img src="images/friend.png" alt="" /></i>
+							<a href="">
+								<img src="images/ico80.png" alt="" width="55" height="55" />
+								<p class="m_tip">小妮子...</p>
+							</a>
+						</li>
+						<div class="clear"></div>
+						<li class="li_add">
+							<a href="#" class="add_friend">一键添加</a>
+						</li>
+					</ul>
+					
+				</div>
+			</div>
+		</div>
+
+
+    </div>
+    
+</div>
+ 
+
+	<script type="text/javascript">
+		$(function(){
+			/*设置table每行的背景*/
+			$(".wrap1200 .right-con .friendList").find("table tr:even").css({"background":"#edeeee"});
+			$("input[type='text']").focus(function(){
+				$(this).addClass("remark");
+			});
+			
+			/*设置输入框失去焦点后的样式*/
+			$("input[type='text']").blur(function(){
+				$(this).removeClass("remark");
+			});
+			/*设置输入框获取焦点后的样式*/
+			$("select").focus(function(){
+				$(this).addClass("groups");
+			});
+			
+			/*设置下拉框失去焦点后的样式*/
+			$("select").blur(function(){
+				$(this).removeClass("groups");
+			});
+			
+			/*设置可能认识模块中'好友'小图标的显示和隐藏*/
+			$(".m_con ul li").hover(function(){
+				var _index = $(this).index();
+				var index = _index + 1;
+				
+				$(this).find(".m_icon" + index).show();
+			},function(){
+				var _index = $(this).index();
+				var index = _index + 1;
+
+				$(this).find(".m_icon" + index).hide();
+
+			});
+		})
+		/*设置全选*/
+		function selectAll(checkbox) {
+                $('input[type=checkbox]').prop('checked', $(checkbox).prop('checked'));
+        }
+
+	</script>
+
+	<script>
+		//自动获取浏览器宽高
+			  var h=($(window).height());
+			  $('.sideber').css({width:150,height:h});	
+
+		// 鼠标缩放值进行变化
+		function setwidth(){
+			  var h=($(window).height());
+			  $('.sideber').css({width:150,height:h});
+		};
+		window.onresize=function(){setwidth()};
+</script>
+</body>
+</html>

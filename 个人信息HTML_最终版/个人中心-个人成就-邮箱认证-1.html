@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>个人中心-个人成就-邮箱认证-1</title>
+<link rel="stylesheet" type="text/css" href="css/public.css"/>
+<link rel="stylesheet" type="text/css" href="css/perInfor.css"/>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/tab.js"></script>
+<script type="text/javascript" src="js/hideshow.js"></script>
+<script type="text/javascript" src="js/plugin.progressbar.js"></script>
+
+</head>
+
+<body>
+<div class="wrap1200">
+	<div class="sideber">
+    	<div  class="sideberTx">
+            <h3><img src="images/tx-ico.jpg"//></h3>
+            <p>阳光生活</p>
+		</div>
+        <div class="sideberList">
+        	<h4><b class="si1">1</b><a>我的资料</a></h4>
+            <h4><b class="si2">2</b><a>我的信息</a></h4>
+            <h4><b class="si3">3</b><a>电子相册</a></h4>
+            <h4><b class="si4">4</b><a>好友信息</a></h4>
+            <h4><b class="si5">5</b><a>装扮宠物</a></h4>
+            <h4><b class="si6">6</b><a>我的足迹</a></h4>	
+        </div>
+        <div class="logo"><a href=""><img src="images/logo.png" width="100" height="26"/></a></div>
+    </div>
+    <div class="right-con">
+    	<div class="mailboxWrap">
+        	<div class="mailboxT"><img src="images/mailT.png"/></div>
+            <div class="mailboxMian">
+            	<dl class="mailboxMianDl">
+                	<dt>
+                    	<p><b>邮箱地址：</b><input type="text" value="xiangjiaodiangou@163.com"/></p>
+                        <p><a href="">下一步</a></p>
+                    </dt>
+                    <dd>
+                    	<p>邮箱与账号绑定后，您可以在忘记密码或账号被盗时通过绑定的邮箱或短信进行密码重置的操作。</p>
+						<p>绑定的邮箱将接收来自本站的重要消息。</p>
+						<p>为了确保您的账号安全，请谨慎设置您的认证邮箱。</p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    
+</div>
+ 
+<script>
+//自动获取浏览器宽高
+      var h=($(window).height());
+      $('.sideber').css({width:150,height:h});	
+
+// 鼠标缩放值进行变化
+function setwidth(){
+	  var h=($(window).height());
+      $('.sideber').css({width:150,height:h});
+};
+window.onresize=function(){setwidth()};
+</script>
+
+<script type="text/javascript">
+
+	$('.progressbar').progressbar({	
+		progresswidth:29,
+		duration:500
+	});
+
+</script>
+</body>
+</html>
