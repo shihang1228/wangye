@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- CSS reset -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Resource style -->
+    <script src="js/modernizr.js"></script>
+    <!-- Modernizr -->
+    <title>弹出框_正确</title>
+	<style type="text/css">
+		.cd-popup-container{width:378px;height:153px;background:url("images/tc_bg.png") no-repeat;}
+		.con_title{font-size:24px;font-family:"微软雅黑";color:#ff7a2a;font-weight:bold;width:300px;height:45px;margin-left:67px;padding-top:20px;}
+		.con_exper{width:300px;margin:12px 0;font-size:16px;font-family:"微软雅黑";display:table;color:#7a443c;margin-left:67px;text-align:left;line-height:26px;padding-left:65px;}
+		.con_exper .con_num{width:50px;height:50px;color:#ff2100;font-size:24px;font-family:"微软雅黑";font-weight:bold;margin-right:30px;}
+		.con_answer{width:300px;height:50px;color:#7a443c;font-size:16px;font-family:"微软雅黑";margin-left:58px;}
+		.con_answer .con_per{width:50px;height:50px;font-size:24px;font-family:"微软雅黑";color:#009cff;font-weight:bold;margin:0 5px;}
+	</style>
+	<link rel="stylesheet" href="css/animate.css" />
+</head>
+<body>
+    <div class="cd-popup is-visible animated bounceIn bounceOut" role="alert">
+        <div class="cd-popup-container">
+            <p class="con_title">恭喜你答对了！</p>
+			<p class="con_exper">经验<span class="con_num">+2</span>友币<span class="con_num">+2</span></p>
+            <p class="con_answer">有<span class="con_per">47%</span>的人选择了相同的答案</p>
+            <a href="#0" class="cd-popup-close img-replace">Close</a>
+        </div>
+        <!-- cd-popup-container -->
+    </div>
+    <!-- cd-popup -->
+    <script src="js/jquery.1.11.1.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Resource jQuery -->
+</body>
+</html>
+

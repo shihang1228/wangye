@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+		<title>html模板</title>
+		<meta name="Keywords" content="关键词，关键词">
+		<meta name="description" content="">
+
+		<style>
+			*{margin:0;padding:0;}
+			body{font-size:14px;font-family:"微软雅黑"}
+		</style>
+	 </head>
+ <body>
+	<script type="text/javascript">
+		 var Obj=function(msg){
+                   this.msg=msg;
+                   this.shout=function(){
+                        alert(this.msg);
+                   }
+				   var obj = this;
+                  this.waitAndShout=function(){
+                        setTimeout(obj.shout(), 2000);
+                  }
+
+        }
+        var aa=new Obj("abc");
+        aa.waitAndShout();
+	</script>
+ </body>
+</html>

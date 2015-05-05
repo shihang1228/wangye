@@ -172,7 +172,7 @@ var top1=parseInt(top); if(isNaN(top1) ){top1=0;}
 			}
 	    
 		
-		$("#chart").css("top",i+210);
+   $("#chart").css("top",i+210);
    $("#chart").css("left",h);
   $("#show1").css("top",i-80);
    $("#show1").css("left",h+120);

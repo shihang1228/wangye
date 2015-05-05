@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+
+.chatWrap{ width:400px; position:absolute; left:50%; top:50%; margin-left:-200px; margin-top:-382px; background:#fff;}
+.chatTop{ height:514px; overflow:auto;}
+.chatTop_tit{ text-align:center; color:#252424; font-weight:100; margin-top:5px;}
+.chatTop_left{clear:both; display:table; margin-top:5px;}
+.chatTop_left dt{ float:left; width:30px; height:30px;}
+.chatTop_left dd{ float:left; position:relative;padding-left:17px; width:253px;}
+.ltJt{ position:absolute; display:block; width:14px; height:14px; background:url(../images/chat/ltjt.png) no-repeat; left:4px; top:10px; }
+.ltT{ width:253px; height:7px; background:url(../images/chat/ltT.png) no-repeat;}
+.ltC{ width:243px; display:table; padding:5px; background:url(../images/chat/ltC.png) repeat-y; color:#252424;}
+.ltB{ width:253px; height:7px; overflow:hidden; background:url(../images/chat/ltB.png) no-repeat;}
+
+.chatTop_right{ clear:both;margin-top:5px; width:100%; display:table;}
+.chatTop_right dt{ float:right; width:30px; height:30px;}
+.chatTop_right dd{ float:right; width:253px;position:relative; padding-right:17px;}
+.ltJt2{ position:absolute; display:block; width:15px; height:15px; background:url(../images/chat/rtjt.png) no-repeat; right:4px; top:10px; }
+.ltT2{ width:253px; height:9px; background:url(../images/chat/ltT2.png) no-repeat;}
+.ltC2{ width:233px; display:table; padding:5px 10px; background:url(../images/chat/ltC2.png) repeat-y; color:#252424;}
+.ltB2{ width:253px; height:9px; overflow:hidden; background:url(../images/chat/ltB2.png) no-repeat;}
+
+.chatTop_right2{ clear:both; margin-top:5px; width:100%; display:table;}
+.chatTop_right2 dt{ float:right; width:30px; height:30px;}
+.chatTop_right2 dd{ float:right; width:253px;position:relative; padding-right:17px;}
+.ltJt22{ position:absolute; display:block; width:15px; height:15px; background:url(../images/chat/rtjt2.png) no-repeat; right:4px; top:10px; }
+.ltT22{ width:253px; height:7px; background:url(../images/chat/ltT.png) no-repeat;}
+.ltC22{ width:233px; display:table; padding:5px 10px; background:url(../images/chat/ltC.png) repeat-y; color:#252424;}
+.ltB22{ width:253px; height:7px; overflow:hidden; background:url(../images/chat/ltB.png) no-repeat;}
+
+
+.xian{ width:100%; border-top:1px solid #ccc; margin-top:5px; padding-top:5px; text-align:right;}
+.xian a{ font-size:10px; padding:0 2px; color:#252424;}
+
+.chatBot_t{ height:152px;}
+.chatBot_t dl{ float:left; width:200px; text-align:center;}
+.chatBot_t dl dd img{ width:34px; height:34px; margin:0 4px;}
+.chatBot_b{ width:339px; height:98px; border:1px solid #bababa; border-radius:4px; margin:0 auto;}
+.chatBot_b h3{ height:23px; line-height:23px; background:#d7d7d7; border-radius:4px; font-weight:100; color:#8ea1a6; font-size:12px;}
+.chatBot_b h3 b{ padding:0 20px 0 10px; font-size:14px; color:#ff6c00;}
+.chatBot_b textarea{ width:327px; height:42px; padding:6px; resize:none; border:0; background:#fff;}
+.ls{ display:block; width:56px; height:16px; background:#bdbdbd; line-height:16px; text-align:center; color:#fff; border-radius:4px; float:left; margin-left:5px;}
+.fs{ display:block; float:right; width:35px; height:16px;background:#bdbdbd; line-height:16px; text-align:center; color:#fff; border-radius:4px; margin:0 5px 0 10px}
+.sum{ float:right; color:#888888;}
+.chatBot_b p a:hover{ background:#ff6c00; color:#fff;}
+
+
+
+
+
+
+
+
